@@ -48,6 +48,15 @@ case "logout":
 case "acerca":
     include_once "controllers/acerca.control.php";
     die();
+case "basculasComerciales":
+    include_once "controllers/basculasComerciales.control.php";
+    die();
+case "basculasIndustriales":
+    include_once "controllers/basculasIndustriales.control.php";
+    die();
+case "basculasPrecision":
+    include_once "controllers/basculasPrecision.control.php";
+    die();
 }
 
 //Este switch se encarga de todo el enrutamiento que ocupa login

@@ -1,0 +1,1020 @@
+/*slider--------------------------------------------------------------------------------------------------------------------------------------*/
+ul,ol{
+	list-style: none;	
+}
+
+.contenedor{
+	position: relative;
+	width: 100%;
+    height: 700px;	
+    top: -80px;
+}
+
+.slider-contenedor li, ul{
+	width: 100%;
+	height: 100%;
+}
+
+.slider-contenedor li{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.slider-contenedor li img{
+	position: absolute;
+	width: 100%;
+	left: 0;
+    top: 0;
+    height: 700px;
+}
+
+.slider-contenedor section{
+	position: relative;
+	left: 30%;
+	height: 50%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.slider-contenedor  .slider-informacion{
+	position: absolute;
+	width: 100%;
+	top:  0;
+	left: 0;
+	padding: 15px 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+}
+
+.slider-contenedor section h1{
+	font-size: 20px;
+	text-align: justify;
+}
+
+.slider-contenedor section p{
+    position: absolute;	
+	font-size: 15px;
+	text-align: justify;
+}
+
+.pagination{
+	position: absolute;
+	top: 650px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li{
+	font-size: 20px;
+	margin: 2px 5px;
+    color: gray;
+    cursor: pointer;
+}
+
+.left, .right{
+	position: absolute;
+	top: -10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #2196f3;
+	font-size: 35px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.left{
+	left: 10px;
+}
+
+.right{
+	right: 10px;
+}
+
+/*slider*/
+/*botones de slider para direccionar a las paginas de productos*/
+ .btn1, .btn2, .btn3{
+	padding: 2.5rem 7rem;
+	background: transparent;
+	border: 0.1rem solid rgb(106, 150, 185);
+	cursor:  pointer;
+	position: relative;
+	border-radius: .3rem;
+	overflow: hidden;
+	width: 10%;
+	top:300px;
+	left: -420px;   
+}
+
+.btn1::before {
+	content: "Basculas De Precisión";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-weight: 700;
+	text-shadow: .1rem .1rem .1rem #333;
+	transition: .2s ease;
+}
+
+.btn1::after{
+	content: "Bayser Honduras";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: translate(-50%,-50%) scale(0) ;
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+ .btn2::before {
+	content: "Basculas Comerciales";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn3::before {
+	content: "Basculas Industriales";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn1:hover::before,.btn2:hover::before,.btn3:hover::before{
+    transform: translate(-50%,-50%) scale(3);
+    opacity: 0;
+}
+
+.btn1:hover::after,.btn2:hover::after,.btn3:hover::after{
+	transform: translate(-50%,-50%) scale(1);
+	opacity: 1;
+}
+/*botones*/
+/*slider*/
+/*-------------------------------------------matriz-productos--------------------------------------------*/
+p {
+    line-height: 1.5;
+    display: flex;
+    padding: 0px 10px;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+.columna-6{
+    box-shadow: 0px 0px 3px #333333;
+    border-top: 1px solid #333333;
+    text-align: justify;
+    display: flex;
+}
+
+.matriz-basculas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.titulo-producto{
+    display: flex;
+    top: 0;
+    justify-content: center;
+}
+
+@media screen and (min-width:320px){
+/*Responsive del slider*/ 
+.contenedor{
+    flex-basis: 100%;
+    height: 400px;
+}
+    
+.slider-contenedor li, ul{   
+    width: 100%;
+    height: 100%;
+}
+    
+.slider-contenedor li{
+    flex-basis: 100%;
+    height: 100%;   
+}
+    
+.slider-contenedor li img{
+    width: 100%;
+    height: 400px;
+}
+    
+.slider-contenedor section{
+    height: 50%;    
+}
+    
+.slider-contenedor  .slider-informacion{
+    flex-basis: 100%;
+    padding: 15px 50px;
+    display: flex;   
+}
+    
+.pagination{
+    top: 382px;
+    flex-basis: 100%;
+    display: flex;
+}
+    
+.pagination li{
+    font-size:  10px;
+    margin: 2px 5px;
+}
+    
+.left, .right{
+    top: 9px;
+    height: 100%;
+    display: flex; 
+    font-size: 20px;
+}
+    
+.btn1, .btn2, .btn3{    
+    padding: 1rem 3rem;
+    width: 10%;
+    top: 195px;
+    left: -115px;
+}
+
+.btn1::before {
+    content: "Basculas De Precisión";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn1::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn2::before {
+    content: "Basculas Comerciales";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+    
+.btn3::before {
+    content: "Basculas Industriales";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.matriz-basculas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columna-6{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 350px;
+    margin: 5px;
+    color: black;
+    flex-basis: calc(100%/1);
+    transition: .5s;
+}
+
+.columna-6:hover{
+    height: 370px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .3;
+}
+
+.imagen-bascula{
+    height: 100%;
+    width: 48%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.informacion-producto{
+    font-size: 12.3px;
+    line-height: 1.2;
+}
+
+.parrafo-columna{
+    line-height: 1.2;
+    padding: 0px 4px;
+}
+}
+
+@media screen and (min-width:481px){
+/*Responsive del slider*/ 
+.contenedor{
+    flex-basis: 100%;
+    height: 650px;
+}
+
+.slider-contenedor li, ul{
+    width: 100%;
+    height: 100%;
+}
+
+.slider-contenedor li{
+    flex-basis: 100%;
+    height: 100%;   
+}
+
+.slider-contenedor li img{
+    width: 100%;
+    height: 650px;
+}
+
+.slider-contenedor section{
+    height: 50%;
+}
+
+.slider-contenedor  .slider-informacion{
+    flex-basis: 100%;
+    padding: 15px 50px;
+    display: flex;
+}
+
+.pagination{
+    top: 630px;
+    flex-basis: 100%;
+    display: flex;
+}
+
+.pagination li{
+    font-size:  10px;
+    margin: 2px 5px;
+ }
+
+.left, .right{
+    top: -23px;
+    height: 100%;
+    display: flex; 
+    font-size: 25px;
+}
+
+.btn1, .btn2, .btn3{    
+    padding: 1.6rem 4.3rem;
+    width: 10%;
+    top: 290px;
+    left: -235px; 
+}
+  
+.btn1::before {
+    content: "Basculas De Precisión";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn1::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn2::before {
+    content: "Basculas Comerciales";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn3::before {
+    content: "Basculas Industriales";
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+/*Responsive de matriz*/      
+.matriz-basculas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columna-6{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 320px;
+    margin: 5px;
+    color: black;
+    flex-basis: calc(100%/1.1);
+    transition: .5s;
+}
+
+.columna-6:hover{
+    height: 350px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .3;
+}
+
+.imagen-bascula{
+    height: 100%;
+    width: 40%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.informacion-producto{
+    font-size: 14px;
+    line-height: 1;
+}
+}
+
+@media screen and (min-width:768px){   
+/*Responsive del slider*/ 
+.contenedor{
+    flex-basis: 100%;
+    height: 700px;	
+}
+
+.slider-contenedor li, ul{
+    width: 100%;
+    height: 100%;
+}
+
+.slider-contenedor li{
+    flex-basis: 100%;
+    height: 100%;   
+}
+
+.slider-contenedor li img{
+    width: 100%;
+    height: 700px;
+}
+
+.slider-contenedor section{
+    height: 50%;
+}
+
+.slider-contenedor  .slider-informacion{
+    flex-basis: 100%;
+    padding: 15px 50px;
+    display: flex;
+}
+
+.pagination{
+    top: 670px;
+    flex-basis: 100%;
+    display: flex;
+}
+
+.pagination li{
+    font-size:  15px;
+    margin: 2px 5px;
+}
+
+.left, .right{
+    top: -10px;
+    height: 100%;
+    display: flex; 
+    font-size: 30px;
+}
+
+.btn1, .btn2, .btn3{    
+    padding: 2rem 5.3rem;
+    width: 10%;
+    left: -302px;
+    top: 315px;
+}
+
+.btn1::before {
+    content: "Basculas De Precisión";
+    position: absolute;
+    top: 22.5%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn1::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn2::before {
+    content: "Basculas Comerciales";
+    position: absolute;
+    top: 22.5%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn3::before {
+    content: "Basculas Industriales";
+    position: absolute;
+    top: 22.5%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+/*Responsive de matriz*/     
+.matriz-basculas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columna-6{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 325px;
+    flex-basis: calc(100%/1.3);
+    flex-grow: .4;
+    color: black;
+    transition: .5s;
+}
+
+.columna-6:hover{
+    height: 335px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .5;
+}
+
+.imagen-bascula{
+    height: 100%;
+    width: 40%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.informacion-producto{
+    font-size: 15px;
+    line-height: 1.5;
+}
+}
+
+@media screen and (min-width:1025px){
+/*Responsive del slider*/ 
+.contenedor{
+    flex-basis: 100%;
+    height: 700px;	
+}
+    
+.slider-contenedor li, ul{    
+    flex-basis: 100%;
+    height: 100%;
+}
+    
+.slider-contenedor li{
+    flex-basis: 100%;
+    height: 100%;   
+}
+    
+.slider-contenedor li img{
+    flex-basis: 100%;
+    height: 700px;
+}
+    
+.slider-contenedor section{
+    height: 50%;    
+}
+    
+.slider-contenedor  .slider-informacion{
+    flex-basis: 100%;
+    padding: 15px 50px;
+    display: flex;   
+}
+    
+.slider-contenedor section h1{
+    font-size: 20px;
+}
+    
+.slider-contenedor section p{
+    font-size: 15px;    
+}
+    
+.pagination{
+    top: 660px;
+    flex-basis: 100%;
+    display: flex;
+}
+    
+.pagination li{
+    font-size: 20px;
+    margin: 2px 5px;
+}
+    
+.left, .right{
+    top: -10px;
+    height: 100%;
+    display: flex; 
+    font-size: 35px;
+}
+    
+.btn1, .btn2, .btn3{
+    padding: 2.5rem 7rem;
+    width: 10%;
+    top:330px;
+    left: -413px;
+}
+
+.btn1::before {
+    content: "Basculas De Precisión";
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn1::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn2::before {
+    content: "Basculas Comerciales";
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+    
+.btn3::before {
+    content: "Basculas Industriales";
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    translate: translate(-50%,-50%);
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+    
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+/*Responsive de matriz*/       
+header nav ul li{
+    display: inline-block;
+}
+
+.matriz-basculas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+}
+
+.columna-6{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 340px;
+    flex-basis: calc(100%/3);
+    flex-grow: .4;
+    color: black;
+    transition: .5s;
+}
+
+.columna-6:hover{
+    height: 350px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .5;
+}
+
+.imagen-bascula{
+    height: 100%;
+    width: 38%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.informacion-producto{
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+}
