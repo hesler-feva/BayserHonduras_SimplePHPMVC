@@ -33,7 +33,7 @@
                         <li><a href="">Servicios</a>
                             <ul >
                                 <li><a href="">Venta</a></li>
-                                <li><a href="">Instalación</a></li>
+                                <li><a href="index.php?page=instalaciones">Instalación</a></li>
                                 <li><a href="">Mantenimiento</a></li>
                             </ul>
                         </li>

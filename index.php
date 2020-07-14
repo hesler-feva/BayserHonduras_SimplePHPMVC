@@ -57,6 +57,9 @@ case "basculasIndustriales":
 case "basculasPrecision":
     include_once "controllers/basculasPrecision.control.php";
     die();
+case "instalaciones":
+    include_once "controllers/instalaciones.control.php";
+    die();
 }
 
 //Este switch se encarga de todo el enrutamiento que ocupa login
