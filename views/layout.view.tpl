@@ -35,7 +35,7 @@
                             <ul >
                                 <li><a href="index.php?page=servicioVentas">Venta</a></li>
                                 <li><a href="index.php?page=instalaciones">Instalación</a></li>
-                                <li><a href="">Mantenimiento</a></li>
+                                <li><a href="index.php?page=servicioMantenimiento">Mantenimiento</a></li>
                             </ul>
                         </li>
                         <li><a href="">Quienés Somos</a></li>
