@@ -57,13 +57,11 @@ case "basculasIndustriales":
 case "basculasPrecision":
     include_once "controllers/basculasPrecision.control.php";
     die();
-<<<<<<< HEAD
 case "instalaciones":
     include_once "controllers/instalaciones.control.php";
-=======
+    die();
 case "servicioVentas":
     include_once "controllers/servicioVentas.control.php";
->>>>>>> 5a1d081a409371ecbfaa16161c7ceb5ec4b64b7a
     die();
 }
 

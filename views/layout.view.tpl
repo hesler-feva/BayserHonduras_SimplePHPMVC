@@ -33,13 +33,8 @@
 
                         <li><a href="">Servicios</a>
                             <ul >
-<<<<<<< HEAD
-                                <li><a href="">Venta</a></li>
-                                <li><a href="index.php?page=instalaciones">Instalación</a></li>
-=======
                                 <li><a href="index.php?page=servicioVentas">Venta</a></li>
-                                <li><a href="">Instalación</a></li>
->>>>>>> 5a1d081a409371ecbfaa16161c7ceb5ec4b64b7a
+                                <li><a href="index.php?page=instalaciones">Instalación</a></li>
                                 <li><a href="">Mantenimiento</a></li>
                             </ul>
                         </li>
