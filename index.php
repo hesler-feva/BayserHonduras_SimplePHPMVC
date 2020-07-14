@@ -70,6 +70,10 @@ case "formCotizar":
     include_once "controllers/formCotizar.control.php";
     die();    
 }
+case "quienesSomos":
+    include_once "controllers/quienesSomos.control.php";
+    die();    
+}
 
 //Este switch se encarga de todo el enrutamiento que ocupa login
 $logged = mw_estaLogueado();

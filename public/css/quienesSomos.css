@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    margin: 0;
+    padding:  0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0%;
+}
+    
+header{
+    background-image: url(img/form_fondo_barra.jpg);
+    background-color:transparent;
+    height: 59.6167px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav{
+    width: 100%;
+    background-color: rgba(20, 19, 19, 0.68);
+     margin-top: -30px;
+     text-align: center;
+     position: fixed;
+     margin: -px;
+     margin-bottom: 20px;
+     height: auto;
+     padding:  0;
+     z-index: 10;   
+}
+
+header nav ul{
+	padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+}
+
+header nav ul li{
+	display: inline-block;
+    margin: 0px;
+	padding: 0px;
+}
+
+header nav ul li a{
+    display: inline-block;
+    width: 100%;
+    padding: 17px 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #333333;
+    color: white;
+    transition: all 0.4s linear;
+    font-family: 'Baloo Thambi 2', cursive;
+    position: relative;
+    background: darkgreen(#2196f3,15);
+    text-transform: initial;
+}
+
+header nav ul li a::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background: #2196f3;
+    transition: .3s;
+}
+
+header nav ul li a:hover::before{
+    width: 100%;
+    left: 0;
+    border: none;
+    border-left: 3px solid #2196f3;
+}
+
+ul li ul li {
+    float: left;
+}
+        
+ul li ul{
+    display: none;
+    position: relative;
+    width: 200px;
+    padding: 10px 15px;
+}
+
+li:hover>ul{
+    display: block;
+}
+
+#body{
+	width: 100%;
+	height: 0px;
+}
+/*Icono de la empresa*/
+.logo{
+    position: relative;
+    margin-top: 29px;
+    margin-bottom: -10px;
+    width: 50px;
+    left: 10px; 
+}
+
+.logo .imgnav{           
+    float: left;
+    left: 10px;
+    width:100px;
+    height: 100%;
+    top: 3px;
+    margin-bottom: 5px;
+} 
+
+header .btn_hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 30px;
+    right: 7px;
+    cursor: pointer;
+}
+
+header .btn_hamburger div{
+    width: 90%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Quienes Somos */
+/* .quienes{
+    position: absolute;
+    top: 0px;
+} */
+
+.container_1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(img/form_fondo.jpg);
+}
+
+.container_1 .box{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden; 
+    text-align: center;
+}
+
+.container_1 .box:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(255,255,255,.2);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.container_1 .box .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.container_1 .box:nth-child(1) .icon{
+    box-shadow: 0 0 0 0 #e91e63;
+    background: #e91e63;
+}
+
+.container_1 .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #e91e63;
+}
+
+.container_1 .box:nth-child(2) .icon{
+    box-shadow: 0 0 0 0 #761ee9;
+    background: #761ee9;
+}
+
+.container_1 .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #761ee9;
+}
+
+.container_1 .box:nth-child(3) .icon{
+    box-shadow: 0 0 0 0 #e9801e;
+    background: #e9801e;
+}
+
+.container_1 .box:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px #e9801e;
+}
+
+.container_1 .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container_1 .box:hover .content{
+    color: #fff;
+
+}
+
+.container_1 .box .content h3{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.container_1 .box .content p{
+    margin: 0;
+    padding: 0;
+}
+
+a.info{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    color:#000;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+/*CUERPO*/
+
+.informacion{
+    width: 100%;
+    height: 450px;
+    background-color: rgb(16, 117, 189);
+}
+
+@media screen and (min-width:320px){
+.container_1 .box{
+    flex-basis: calc(100%/(1));
+    height: 350px;
+    padding: 40px;
+    top: 10px;
+    left: 0PX;
+}
+    
+.container_1 .box .icon{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    /* font-weight: 700;
+    transition: 1s;*/
+}
+    
+.container_1 .box .content h3{
+    font-size: 20px;
+}
+    
+.container_1 .box .content p{
+    font-size: 15px;
+}
+}
+
+@media screen and (min-width:481px){
+.container_1 .box{   
+    flex-basis: calc(100%/(1.2));
+    height: 420px;
+    padding: 40px;
+    top: 10px;
+    left: 20px;     
+}
+      
+.container_1 .box .icon{
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+}
+
+.container_1 .box .content h3{
+    font-size: 25px;
+}
+     
+.container_1 .box .content p{
+    font-size: 20px;
+}            
+}
+
+@media screen and (min-width:768px){
+.container_1 .box{   
+    flex-basis: calc(100%/(1.5));
+    height: 450px;
+    padding: 40px;
+    top: 15px;
+    left: 108px;
+}
+ 
+.container_1 .box .icon{
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+   /* font-weight: 700;
+    transition: 1s;*/
+}
+
+.container_1 .box .content h3{
+    position: relative;
+    font-size: 35px;
+}
+
+.container_1 .box .content p{
+    position: relative;
+    font-size: 25px;
+}
+
+}
+
+@media screen and (min-width:1025px){
+.container_1 .box{
+    flex-basis: calc((100%)/3.5);
+    padding: 40px;
+    height: 440px;
+    left: 0px;
+}
+    
+.container_1 .box .icon{
+    flex-basis: 80px;
+    width:90px ;
+    height: 90px;
+    font-size: 45px;
+}
+
+.container_1 .box .content p{
+    font-size: 17px;
+}
+    
+.container_1 .box .content h3{
+    font-size: 20px;
+}
+}

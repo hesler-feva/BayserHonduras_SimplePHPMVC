@@ -38,7 +38,7 @@
                                 <li><a href="index.php?page=servicioMantenimiento">Mantenimiento</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Quienés Somos</a></li>
+                        <li><a href="indez.php?page=quienesSomos ">Quienés Somos</a></li>
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="">Recomendaciones</a></li>
                     </ul>
