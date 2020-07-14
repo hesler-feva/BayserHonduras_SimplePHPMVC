@@ -5,6 +5,7 @@
             <title>{{page_title}}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet"> 
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
             <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
@@ -32,7 +33,7 @@
 
                         <li><a href="">Servicios</a>
                             <ul >
-                                <li><a href="">Venta</a></li>
+                                <li><a href="index.php?page=servicioVentas">Venta</a></li>
                                 <li><a href="">Instalación</a></li>
                                 <li><a href="">Mantenimiento</a></li>
                             </ul>
