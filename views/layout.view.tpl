@@ -39,7 +39,7 @@
                             </ul>
                         </li>
                         <li><a href="">Quienés Somos</a></li>
-                        <li><a href="">Cotizaciones</a></li>
+                        <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="">Recomendaciones</a></li>
                     </ul>
             </nav>        

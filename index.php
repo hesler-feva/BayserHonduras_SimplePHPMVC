@@ -66,6 +66,9 @@ case "servicioVentas":
 case "servicioMantenimiento":
     include_once "controllers/servicioMantenimiento.control.php";
     die();
+case "formCotizar":
+    include_once "controllers/formCotizar.control.php";
+    die();    
 }
 
 //Este switch se encarga de todo el enrutamiento que ocupa login
