@@ -71,6 +71,9 @@ case "formCotizar":
     die();    
 case "quienesSomos":
     include_once "controllers/quienesSomos.control.php";
+    die();
+case "formRecomendar":
+    include_once "controllers/formRecomendar.control.php";
     die();    
 }
 

@@ -40,7 +40,7 @@
                         </li>
                         <li><a href="index.php?page=quienesSomos">Quienés Somos</a></li>
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
-                        <li><a href="">Recomendaciones</a></li>
+                        <li><a href="index.php?page=formRecomendar">Recomendaciones</a></li>
                     </ul>
             </nav>        
          </header>
