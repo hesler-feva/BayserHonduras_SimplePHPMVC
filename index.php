@@ -69,7 +69,6 @@ case "servicioMantenimiento":
 case "formCotizar":
     include_once "controllers/formCotizar.control.php";
     die();    
-}
 case "quienesSomos":
     include_once "controllers/quienesSomos.control.php";
     die();    
