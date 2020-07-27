@@ -65,3 +65,30 @@ CREATE TABLE `bitacora` (
   `bitusuario` bigint(18) DEFAULT NULL,
   PRIMARY KEY (`bitacoracod`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `producto` (
+  `productoid`INT NOT NULL AUTO_INCREMENT, 
+  `pro_nombre` varchar(50) NOT NULL,
+  `categoria_id` INT NOT NULL,
+  `pro_estado` char(3) DEFAULT NULL,
+  `pro_descripcion` varchar(100) NOT NULL,
+  `pro_cantidad` INT NOT NULL,
+  `precio_venta` DECIMAL(18,2) NOT NULL,
+  CONSTRAINT `categorias_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`catid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  PRIMARY KEY(productoid)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `inventario` (
+  `inventarioid`INT NOT NULL AUTO_INCREMENT, 
+  `inventario_desc` varchar(100) NOT NULL,
+  `inventario_fech` DATE NOT NULL,
+  `stock` INT NOT NULL,
+   PRIMARY KEY(inventarioid)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  
+  CREATE TABLE `inventario-producto` (
+  `productoid` INT NOT NULL,
+  `inventarioid` INT NOT NULL,
+  CONSTRAINT `productoid` FOREIGN KEY (`productoid`) REFERENCES `producto` (`productoid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `inventarioid` FOREIGN KEY (`inventarioid`) REFERENCES `inventario` (`inventarioid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
