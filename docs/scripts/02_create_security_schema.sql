@@ -1,4 +1,4 @@
-use demoalgorith;
+use nw202002;
 CREATE TABLE `usuario` (
   `usercod` bigint(10) NOT NULL AUTO_INCREMENT,
   `useremail` varchar(80) DEFAULT NULL,
@@ -55,40 +55,57 @@ CREATE TABLE `funciones_roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE `bitacora` (
-  `bitacoracod` int(11) NOT NULL AUTO_INCREMENT,
-  `bitacorafch` datetime DEFAULT NULL,
-  `bitprograma` varchar(15) DEFAULT NULL,
-  `bitdescripcion` varchar(255) DEFAULT NULL,
-  `bitobservacion` mediumtext,
-  `bitTipo` char(3) DEFAULT NULL,
-  `bitusuario` bigint(18) DEFAULT NULL,
-  PRIMARY KEY (`bitacoracod`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-
-CREATE TABLE `producto` (
-  `productoid`INT NOT NULL AUTO_INCREMENT, 
-  `pro_nombre` varchar(50) NOT NULL,
-  `categoria_id` INT NOT NULL,
-  `pro_estado` char(3) DEFAULT NULL,
-  `pro_descripcion` varchar(100) NOT NULL,
-  `pro_cantidad` INT NOT NULL,
-  `precio_venta` DECIMAL(18,2) NOT NULL,
-  CONSTRAINT `categorias_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`catid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  PRIMARY KEY(productoid)
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE `inventario` (
-  `inventarioid`INT NOT NULL AUTO_INCREMENT, 
-  `inventario_desc` varchar(100) NOT NULL,
-  `inventario_fech` DATE NOT NULL,
+CREATE TABLE `productos` (
+  `cod_producto` BIGINT(18) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(70) NOT NULL,
+  `descripcion` VARCHAR(255) NOT NULL,
   `stock` INT NOT NULL,
-   PRIMARY KEY(inventarioid)
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-  
-  CREATE TABLE `inventario-producto` (
-  `productoid` INT NOT NULL,
-  `inventarioid` INT NOT NULL,
-  CONSTRAINT `productoid` FOREIGN KEY (`productoid`) REFERENCES `producto` (`productoid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `inventarioid` FOREIGN KEY (`inventarioid`) REFERENCES `inventario` (`inventarioid`) ON DELETE NO ACTION ON UPDATE NO ACTION
-  )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `tipo_producto` CHAR(3) NOT NULL,
+  `precio` DECIMAL(12,2) NOT NULL,
+  `url_img_producto` VARCHAR(255) NULL,
+  `url_img_pequeña` VARCHAR(255) NULL,
+  `estado` CHAR(3) NOT NULL,
+  `categoria_id` INT NOT NULL,
+  CONSTRAINT `categorias_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`catid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+   PRIMARY KEY (`cod_producto`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `carretilla` (
+  `usercod` BIGINT(10) NOT NULL,
+  `cod_producto` BIGINT(18) NOT NULL,
+  `carr_cantidad` INT(5) NOT NULL,
+  `carr_precio` DECIMAL(12,2) NOT NULL,
+  `carr_fecha` DATETIME NOT NULL,
+  INDEX `cod_producto_idx` (`cod_producto` ASC),
+    CONSTRAINT `carretilla_user_key` FOREIGN KEY (`usercod`) REFERENCES `usuario` (`usercod`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT `carretilla_prd_key` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`cod_producto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `factura` (
+ `factura_Cod` bigint(18) NOT NULL AUTO_INCREMENT,
+ `factura_Fecha` datetime DEFAULT NULL,
+ `userCode` bigint(18) Not NULL,
+ `factura_Est` char(3) DEFAULT NULL,
+ `factura_Monto` decimal(13,2) DEFAULT NULL,
+ `factura_Iva` decimal(13,2) DEFAULT NULL,
+ `factura_Ship` decimal(13,2) DEFAULT NULL,
+ `factura_Total` decimal(13,2) DEFAULT NULL,
+ `factura_PayRef` varchar(255) DEFAULT NULL,
+ `factura_ShpAddr` varchar(255) DEFAULT NULL,
+PRIMARY KEY (`factura_cod`),
+CONSTRAINT `factura_user` FOREIGN KEY (`userCode`) REFERENCES `usuario` (`usercod`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB;
+
+CREATE TABLE `factura_detalle` (
+ `factura_cod` bigint(18) NOT NULL,
+ `cod_producto` bigint(18) NOT NULL,
+ `factura_desc` varchar(70) DEFAULT NULL,
+ `factura_Ctd` int(5) DEFAULT NULL,
+ `factura_precio` decimal(12,2) DEFAULT NULL,
+ CONSTRAINT `factura-detalle` FOREIGN KEY (`factura_cod`) REFERENCES `factura` (`factura_Cod`), 
+ CONSTRAINT `detalle_producto` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`cod_producto`),
+ PRIMARY KEY (`factura_cod`,`cod_producto`)
+) ENGINE=InnoDB;
