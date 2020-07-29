@@ -1,3 +1,4 @@
+use bayserhonduras;
 CREATE TABLE `almacenes` (
   `almcod` BIGINT(18) NOT NULL AUTO_INCREMENT,
   `almdsc` VARCHAR(75) NULL,

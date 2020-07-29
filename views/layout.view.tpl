@@ -11,6 +11,7 @@
             <link rel="stylesheet" href="public/css/estilo.css" />
             <link rel="stylesheet" href="public/css/plantilla.css" />
             <script src="public/js/jquery.min.js"></script>
+            <script src="public/js/hamburguer.js"></script>
             {{foreach css_ref}}
                 <link rel="stylesheet" href="{{uri}}" />
             {{endfor css_ref}}
@@ -22,15 +23,15 @@
                 <div class="logo"><a href="index.php?page=landing">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
                 </div>
+                <div class="hidden">
                     <ul>
                         <li><a href="index.php?page=landing">Inicio</a></li>
                         <li><a href="">Productos</a>
-                            <ul class=>
-                                <li><a href="index.php?page=basculasPrecision">Basculas de Precision</a></li>
-                                <li><a href="index.php?page=basculasIndustriales">Basculas de Industriales</a></li>
-                                <li><a href="index.php?page=basculasComerciales">Basculas de Comerciales</a></li>
-                            </ul></li>
-
+                        <ul>
+                            <li><a href="index.php?page=basculasPrecision">Basculas de Precision</a></li>
+                            <li><a href="index.php?page=basculasIndustriales">Basculas de Industriales</a></li>
+                            <li><a href="index.php?page=basculasComerciales">Basculas de Comerciales</a></li>
+                        </ul></li>
                         <li><a href="">Servicios</a>
                             <ul >
                                 <li><a href="index.php?page=servicioVentas">Venta</a></li>
@@ -42,7 +43,9 @@
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="index.php?page=formRecomendar">Recomendaciones</a></li>
                     </ul>
-            </nav>        
+                    <div class="btn_hamburger"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
+                </div>
+            </nav>      
          </header>
           <!--Esto no se toca!!!-->
             <div class="contenido">
@@ -96,13 +99,21 @@
                 <script src="{{uri}}"></script>
             {{endfor js_ref}}
             <script>
-              $().ready(function(e){
-                $(".hbtn").click(function(e){
-                  e.preventDefault();
-                  e.stopPropagation();
-                  $(".menu").toggleClass('open');
-                  });
-              });
+             document.addEventListener('DOMContentLoaded',page_init);
+
+            var btn_hamburger = null;
+            var ul = null;
+            function page_init(e){
+            btn_hamburger = document.getElementsByClassName("btn_hamburger")[0];
+            ul = document.querySelector("header nav ul");
+            btn_hamburger.addEventListener("click",btn_hamburger_onclic);
+            }
+
+            function btn_hamburger_onclic(e){
+            e.preventDefault();
+            e.stopPropagation();
+            ul.className = (ul.className=="hidden")? "" : "hidden";
+            }
             </script>
         </body>
     </html>

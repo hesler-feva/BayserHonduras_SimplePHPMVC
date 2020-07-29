@@ -492,10 +492,16 @@ header .btn_hamburger{
     right: 15px;
 }
     
-header nav ul{
+/*header nav ul{
     overflow: hidden;
     width: 100vw;
     transition: max-height 1s ease-in;    
+}*/
+
+.hidden ul{
+    overflow: hidden;
+    width: 100vw;
+    transition: max-height 1s ease-in;
 }
         
 header nav ul.hidden{
@@ -622,11 +628,17 @@ header .btn_hamburger{
     right: 15px;
 }
 
+.hidden ul{
+    overflow: hidden;
+    width: 100vw;
+    transition: max-height 1s ease-in;
+}
+/*
 header nav ul{
     overflow: hidden;
     width: 100vw;
     transition: max-height 1s ease-in;    
-}
+}*/
         
 header nav ul.hidden{
     max-height: 0vh;
@@ -762,11 +774,17 @@ header .btn_hamburger{
     top: 50px;
     right: 18px;
 }
-    
+/*    
 header nav ul{
     overflow: hidden;
     width: 100vw;
     transition: max-height 1s ease-in;    
+}*/
+
+.hidden ul{
+    overflow: hidden;
+    width: 100vw;
+    transition: max-height 1s ease-in;
 }
        
 header nav ul.hidden{
