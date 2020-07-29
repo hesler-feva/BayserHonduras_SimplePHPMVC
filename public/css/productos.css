@@ -238,6 +238,13 @@ h1{
     display: flex;
 }
 
+.columna-12{
+    box-shadow: 0px 0px 3px #333333;
+    border-top: 1px solid #333333;
+    text-align: justify;
+    display: flex;
+}
+
 .matriz-basculas{
     display: flex;
     justify-content: center;
@@ -415,6 +422,25 @@ h1{
     color: black;
     flex-basis: calc(100%/1);
     transition: .5s;
+}
+
+.columna-12{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 350px;
+    margin: 5px;
+    color: black;
+    flex-basis: calc(100%/1);
+    transition: .5s;
+}
+
+.columna-12:hover{
+    height: 380px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .3;
 }
 
 .columna-6:hover{
@@ -618,6 +644,25 @@ h1{
     flex-grow: .3;
 }
 
+.columna-12{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 320px;
+    flex-basis: calc(100%/1.4);
+    flex-grow: .7;
+    color: black;
+    transition: .5s;
+}
+
+.columna-12:hover{
+    height: 350px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .5;
+}
+
 .imagen-bascula{
     height: 100%;
     width: 40%;
@@ -800,6 +845,25 @@ h1{
 
 .columna-6:hover{
     height: 335px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .5;
+}
+
+.columna-12{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 300px;
+    flex-basis: calc(100%/1.4);
+    flex-grow: .4;
+    color: black;
+    transition: .5s;
+}
+
+.columna-12:hover{
+    height: 330px;
     margin: 5px;
     color: white;
     background: black;
@@ -1005,6 +1069,25 @@ header nav ul li{
     color: white;
     background: black;
     flex-grow: .5;
+}
+
+.columna-12{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 330px;
+    flex-basis: calc(100%/1.4);
+    flex-grow: .5;
+    color: black;
+    transition: .5s;
+}
+
+.columna-12:hover{
+    height: 360px;
+    margin: 5px;
+    color: white;
+    background: black;
+    flex-grow: .6;
 }
 
 .imagen-bascula{

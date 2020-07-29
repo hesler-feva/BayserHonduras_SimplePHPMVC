@@ -74,7 +74,13 @@ case "quienesSomos":
     die();
 case "formRecomendar":
     include_once "controllers/formRecomendar.control.php";
-    die();    
+    die();  
+case "pruebalogin":
+    include_once "controllers/pruebalogin.control.php";
+    die();     
+case "index":
+    include_once "controllers/index.control.php";
+    die();     
 }
 
 //Este switch se encarga de todo el enrutamiento que ocupa login

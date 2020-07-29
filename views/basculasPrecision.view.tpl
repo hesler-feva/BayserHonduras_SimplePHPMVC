@@ -72,7 +72,7 @@
                         la comunicación.</p>
             </div>
         </div>
-        <div class="columna-12">
+         <div class="columna-6">
             <img src="public/imgs/bascula-precision-4.jpg" alt="" class="imagen-bascula col-12">
             <div class="informacion-producto">
                 <h2 class="titulo-producto">Serie PR de Precisión:</h2>

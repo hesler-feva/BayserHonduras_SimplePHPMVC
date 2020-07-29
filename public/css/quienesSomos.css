@@ -1,10 +1,14 @@
+body{
+    background-color: #D5D8DF;
+}
+
 
 .container_1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url(img/form_fondo.jpg);
 }
+
 
 .container_1 .box{
     position: relative;
@@ -196,6 +200,11 @@ a.info{
 }
 
 @media screen and (min-width:1025px){
+.ex-header {
+    background: url('imgs/ex-header-background.jpg') center center no-repeat;
+    background-size: cover;
+    background-color: red;
+}
 .container_1 .box{
     flex-basis: calc((100%)/3.5);
     padding: 40px;

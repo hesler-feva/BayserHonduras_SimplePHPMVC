@@ -10,6 +10,7 @@
             <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
             <link rel="stylesheet" href="public/css/plantilla.css" />
+            <link rel="stylesheet" href="public/css/pruebalogin.css" />
             <script src="public/js/jquery.min.js"></script>
             <script src="public/js/hamburguer.js"></script>
             {{foreach css_ref}}
@@ -23,7 +24,7 @@
                 <div class="logo"><a href="index.php?page=landing">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
                 </div>
-                <div class="hidden">
+                <div class="menu">
                     <ul>
                         <li><a href="index.php?page=landing">Inicio</a></li>
                         <li><a href="">Productos</a>
@@ -43,7 +44,7 @@
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="index.php?page=formRecomendar">Recomendaciones</a></li>
                     </ul>
-                    <div class="btn_hamburger"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
+                    <div class="hbtn"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
                 </div>
             </nav>      
          </header>
@@ -99,21 +100,13 @@
                 <script src="{{uri}}"></script>
             {{endfor js_ref}}
             <script>
-             document.addEventListener('DOMContentLoaded',page_init);
-
-            var btn_hamburger = null;
-            var ul = null;
-            function page_init(e){
-            btn_hamburger = document.getElementsByClassName("btn_hamburger")[0];
-            ul = document.querySelector("header nav ul");
-            btn_hamburger.addEventListener("click",btn_hamburger_onclic);
-            }
-
-            function btn_hamburger_onclic(e){
-            e.preventDefault();
-            e.stopPropagation();
-            ul.className = (ul.className=="hidden")? "" : "hidden";
-            }
+                 $().ready(function(e){
+                $(".hbtn").click(function(e){
+                  e.preventDefault();
+                  e.stopPropagation();
+                  $(".menu").toggleClass('open');
+                  });
+                });
             </script>
         </body>
     </html>
