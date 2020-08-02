@@ -1,5 +1,12 @@
 /*CUERPO*/
 
+body{
+    background-image: url(../imgs/fondo_1025.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /* Formulario Validaciones */
 .contenido{
     padding-top:  100px;

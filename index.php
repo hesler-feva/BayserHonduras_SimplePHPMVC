@@ -77,7 +77,14 @@ case "formRecomendar":
     die();  
 case "pruebalogin":
     include_once "controllers/pruebalogin.control.php";
-    die();     
+    die();
+case "loginbayser":
+    include_once "controllers/loginbayser.control.php";
+    die();
+case "registrarsebayser":
+    include_once "controllers/registrarsebayser.control.php";
+    die();       
+           
 case "index":
     include_once "controllers/index.control.php";
     die();     

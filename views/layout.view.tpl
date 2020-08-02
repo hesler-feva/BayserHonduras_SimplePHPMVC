@@ -6,6 +6,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet"> 
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
             <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
@@ -43,6 +44,7 @@
                         <li><a href="index.php?page=quienesSomos">Quienés Somos</a></li>
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="index.php?page=formRecomendar">Recomendaciones</a></li>
+                        <li><a href="index.php?page=loginbayser">Iniciar Sesion</a></li>
                     </ul>
                     <div class="hbtn"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
                 </div>
