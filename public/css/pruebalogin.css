@@ -1,5 +1,7 @@
+body{
+    background-color: #D5D8DF;
+}
 
-.ex-header {
-    background: url('../imgs/ex-header-background.jpg') center center no-repeat;
-    background-size: cover;
+.otro{
+    height: 500px;
 }

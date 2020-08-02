@@ -2,7 +2,8 @@
 
 
   function run(){
-      addCssRef("public/css/pruebalogin.css");
+    addCssRef("public/css/log.css");
+    addCssRef("public/css/pruebalogin.css");
     renderizar("pruebalogin",Array());
   }
   run();

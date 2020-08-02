@@ -1,0 +1,9 @@
+body{
+    /*background-image: url("../imgs/ex-header-background.jpg");*/
+    background: url('../imgs/ex-header-background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.content{
+    height: 70vh;
+}
