@@ -11,9 +11,9 @@
             <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
             <link rel="stylesheet" href="public/css/plantilla.css" />
-            <link rel="stylesheet" href="public/css/pruebalogin.css" />
-            <script src="public/js/jquery.min.js"></script>
-            <script src="public/js/hamburguer.js"></script>
+            <!--<link rel="stylesheet" href="public/css/pruebalogin.css" />-->
+            <!--<script src="public/js/jquery.min.js"></script>-->
+            <!--<script src="public/js/hamburguer.js"></script>-->
             {{foreach css_ref}}
                 <link rel="stylesheet" href="{{uri}}" />
             {{endfor css_ref}}

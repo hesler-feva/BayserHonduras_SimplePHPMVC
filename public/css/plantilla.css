@@ -207,7 +207,7 @@ ul,ol{
 	cursor: pointer;
 }
 
-.left, .right{
+.left, .rightSlider{
 	position: absolute;
 	top: 0;
 	height: 100%;
@@ -223,7 +223,7 @@ ul,ol{
 	left: 10px;
 }
 
-.right{
+.rightSlider{
 	right: 10px;
 }
 

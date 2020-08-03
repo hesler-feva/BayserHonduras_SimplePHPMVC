@@ -1,12 +1,32 @@
 <?php
-/* Home Controller
- * 2014-10-14
- * Created By OJBA
- * Last Modification 2014-10-14 20:04
+/**
+ * PHP Version 7
+ * Controlador de Controlador
+ *
+ * @category Controllers_Home
+ * @package  Controllers\Home
+ * @author   Orlando J Betancourth <orlando.betancourth@gmail.com>
+ * @license  Comercial http://
+ *
+ * @version CVS:1.0.0
+ *
+ * @link http://url.com
  */
+ // Sección de requires
 
-  function run(){
-    renderizar("home",Array());
-  }
-  run();
+require_once "models/mantenimiento/productos.models.php";
+
+/**
+ * Corre el Controlador
+ *
+ * @return void
+ */
+function run()
+{
+    $arrDataView = array();
+    $arrDataView["productos"] = productoCatalogo();
+    renderizar("home", $arrDataView);
+}
+run();
 ?>
+

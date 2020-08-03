@@ -51,18 +51,19 @@ CREATE TABLE `funciones_roles` (
 
 
 CREATE TABLE `productos` (
-  `cod_producto` BIGINT(18) NOT NULL AUTO_INCREMENT,
+  `codprd` BIGINT(18) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(70) NOT NULL,
-  `descripcion` VARCHAR(255) NOT NULL,
-  `stock` INT NOT NULL,
-  `tipo_producto` CHAR(3) NOT NULL,
-  `precio` DECIMAL(12,2) NOT NULL,
-  `url_img_producto` VARCHAR(255) NULL,
-  `url_img_pequeña` VARCHAR(255) NULL,
-  `estado` CHAR(3) NOT NULL,
+  `dscprd` VARCHAR(255) NOT NULL,
+  `skuprd` varchar(6) not null,
+  `stkprd` INT NOT NULL,
+  `typprd` CHAR(3) NOT NULL,
+  `prcprd` DECIMAL(12,2) NOT NULL,
+  `urlprd` VARCHAR(255) NULL,
+  `urlthbprd` VARCHAR(255) NULL,
+  `estprd` CHAR(3) NOT NULL,
   `categoria_id` INT NOT NULL,
   CONSTRAINT `categorias_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`catid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-   PRIMARY KEY (`cod_producto`)
+   PRIMARY KEY (`codprd`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `carretilla` (
@@ -75,7 +76,7 @@ CREATE TABLE `carretilla` (
     CONSTRAINT `carretilla_user_key` FOREIGN KEY (`usercod`) REFERENCES `usuario` (`usercod`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-    CONSTRAINT `carretilla_prd_key` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`cod_producto`)
+    CONSTRAINT `carretilla_prd_key` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`codprd`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
@@ -101,6 +102,6 @@ CREATE TABLE `factura_detalle` (
  `factura_Ctd` int(5) DEFAULT NULL,
  `factura_precio` decimal(12,2) DEFAULT NULL,
  CONSTRAINT `factura-detalle` FOREIGN KEY (`factura_cod`) REFERENCES `factura` (`factura_Cod`), 
- CONSTRAINT `detalle_producto` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`cod_producto`),
+ CONSTRAINT `detalle_producto` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`codprd`),
  PRIMARY KEY (`factura_cod`,`cod_producto`)
 ) ENGINE=InnoDB;
