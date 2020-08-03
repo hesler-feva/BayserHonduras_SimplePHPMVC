@@ -24,63 +24,69 @@
     <div class="left">
         <span class="ion-android-arrow-dropleft-circle"></span>
     </div>
-    <div class="right">
+    <div class="rightSlider">
         <span class="ion-android-arrow-dropright-circle"></span>
     </div>
 </div>
-<section class="card depth-2">
-    <h1 class="titulo-bascula bg-blue">Basculas de Precisión</h1>   
-    <section class="matriz-basculas">
-        <div class="columna-6">
-            <img src="public/imgs/1.jpg" alt="" class="imagen-bascula">
-            <div class="informacion-producto">
-                <h2 class="titulo-producto">Explorer de Precisión:</h2>
-                    <p class="parrafo-columna">La serie de balanzas de precisión Explorer de OHAUS combina características 
-                    actuales y elementos de diseño para ofrecer funcionalidad inigualable en una línea de balanzas de alto 
-                    rendimiento distintas de cualquier otra en el mercado. Estas balanzas inteligentes e intuitivas 
-                    simplifican incluso las mediciones en laboratorio más complejas.</p>
-            </div>
-        </div>
-        <div class="columna-6">
-            <img src="public/imgs/bascula-precision-2.jpg" alt="" class="imagen-bascula">
-            <div class="informacion-producto">
-                <h2 class="titulo-producto">Explorer de precisión alta calidad:</h2>    
-                <p class="parrafo-columna">Las balanzas de alta capacidad Explorer de OHAUS proporcionan una funcionalidad
-                        sin igual en una línea de alto rendimiento, ¡son balanzas de alta capacidad como ninguna otra en el 
-                        mercado! Esta balanza inteligente e intuitiva simplifica incluso las mediciones en laboratorio más 
-                        complejas.</p>
-            </div>
-        </div>
-        <div class="columna-6">
-            <img src="public/imgs/bascula-precision-3.jpg" alt="" class="imagen-bascula">
-            <div class="informacion-producto">
-                <h2 class="titulo-producto">Adventurer de precisión:</h2>
-                <p class="parrafo-columna">La Adventurer logra el equilibrio ideal entre características novedosas y 
-                    funciones de pesaje sin complicaciones. La Adventurer d incorpora todas las aplicaciones necesarias para 
-                    pesaje de rutina y actividades de medición avanzadas.Con una pantalla táctil a color, opciones de 
-                    cumplimiento GLP/GMP, dos puertos USB y mucho más, la Adventurer es la balanza más completa en su clase.</p>
-            </div>
-        </div>
-        <div class="columna-6">
-            <img src="public/imgs/bascula-precision-5.jpg" alt="" class="imagen-bascula">
-            <div class="informacion-producto">
-                <h2 class="titulo-producto">Pioneer Precisión:</h2>
-                <p class="parrafo-columna">La Pioneer PX combina la funcionalidad de pesaje esencial con un desempeño competitivo,
-                        ofreciendo una alta precisión y repetibilidad para aplicaciones en configuraciones de laboratorio, industriales
-                        y educativas. La PX tiene un precio accesible y está diseñada intuitivamente para un funcionamiento inteligente
-                        con una pantalla de segunda línea para obtener información adicional y conectividad USB y RS232 para facilitar
-                        la comunicación.</p>
-            </div>
-        </div>
-         <div class="columna-6">
-            <img src="public/imgs/bascula-precision-4.jpg" alt="" class="imagen-bascula col-12">
-            <div class="informacion-producto">
-                <h2 class="titulo-producto">Serie PR de Precisión:</h2>
-                <p class="parrafo-columna">Al ofrecer precisión y repetibilidad en aplicaciones de pesaje esenciales en entornos 
-                    de laboratorio, industriales y educativos, las balanzas analíticas y de precisión PR brindan un rendimiento competitivo 
-                    a un precio económico. Con conectividad RS232 para facilitar la comunicación, una pantalla retroiluminada y una interfaz 
-                    sencilla para simplificar el manejo, la PR está perfectamente diseñada para su lugar de trabajo.</p>
-            </div>
-        </div>
-    </section>
+
+<section class="cards row">
+<h1 class="titulo-bascula bg-blue">Basculas de Precisión</h1>   
+  {{foreach productos}}
+  <section class="col-12 col-sm-6 col-md-3 m-padding">
+    <div class="card col-12 depth-2 m-padding">
+      <span class="col-sm-12 center depth-1">
+        {{if urlthbprd}}
+            <img src="{{urlthbprd}}" alt="{{skuprd}} {{dscprd}}" class="imgthumb center" />
+        {{endif urlthbprd}}
+      </span>
+      <span class="col-12 center depth-1 m-padding card-desc">
+          <span class="card-side">{{skuprd}}</span>
+          <span class="col-12">{{nombre}}</span>
+      </span>
+      <span class="col-12 center depth-1 m-padding">
+        <span class="col-6 m-padding">Disponibles</span>
+        <span class="col-6 right m-padding">{{stkprd}}</span>
+        <span class="col-12 bold center m-padding">
+          <a href="index.php?page=addtocart&codprd={{codprd}}"
+            class="l-padding btn btn-primary col-12 sendToCart">
+            L {{prcprd}} <span class="ion-plus-circled"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+  </section>
+  {{endfor productos}}
 </section>
+<script>
+  $().ready(function(){
+    $(".sendToCart").click( function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $.post(
+        $(this).attr("href"),
+        function( data, success, xqXML ){
+          console.log(data);
+          if(data.cartAmount && data.cartAmount > 0){
+              window.location.reload();
+          }
+        }
+      );
+    });
+  });
+</script>
+<style>
+  .card{
+    position: relative;
+  }
+  .card-desc{
+    height: 4em;
+    overflow: scroll;
+  }
+  .card-side{
+      position: absolute;
+      top:6em;
+      left:1em;
+      transform-origin: left top;
+      transform: rotate(-90deg);
+  }
+</style>

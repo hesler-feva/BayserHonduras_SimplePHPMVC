@@ -56,10 +56,120 @@ function todosLosProductos()
  *
  * @return array Arreglo de Productos
  */
-function productoCatalogo()
+function productoCatalogoBasculasComerciales()
 {
     $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
-        from productos where estprd in('ACT','DSC');";
+        from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBC%');";
+    $tmpProducto =  obtenerRegistros($sqlSelect);
+    $assocProducto = array();
+    foreach ($tmpProducto as $producto) {
+        //Cambiando a imagen predeterminada si no hay imagen
+        $assocProducto[$producto["codprd"]] = $producto;
+        if (preg_match('/^\s*$/', $producto["urlthbprd"])) {
+            $assocProducto[$producto["codprd"]]["urlthbprd"]
+                = "public/imgs/noprodthb.png";
+        }
+    }
+    // Para quitar los reservados de usuario authenticados
+    $timeDelta =  getAuthTimeDelta(); // 6 * 60 * 60; //h , m, s
+    $sqlSelectReserved = "select codprd, sum(crrctd) as reserved
+    from carretilla where TIME_TO_SEC(TIMEDIFF(now(), crrfching)) <= %d
+    group by codprd;
+    ";
+    $arrReserved = obtenerRegistros(
+        sprintf(
+            $sqlSelectReserved,
+            $timeDelta
+        )
+    );
+    foreach ($arrReserved as $reserved) {
+        if (isset($assocProducto[$reserved["codprd"]])) {
+            $assocProducto[$reserved["codprd"]]["stkprd"]
+                = $assocProducto[$reserved["codprd"]]["stkprd"]
+                  - $reserved["reserved"];
+        }
+    }
+    // Para quitar los reservados de usuarion no autenticados
+    $timeDelta = getUnAuthTimeDelta(); // 10 * 60; //h , m, s
+    $sqlSelectReserved = "select codprd, sum(crrctd) as reserved
+    from carretillaanon where TIME_TO_SEC(TIMEDIFF(now(), crrfching)) <= %d
+    group by codprd;
+    ";
+    $arrReserved = obtenerRegistros(
+        sprintf(
+            $sqlSelectReserved,
+            $timeDelta
+        )
+    );
+    foreach ($arrReserved as $reserved) {
+        if (isset($assocProducto[$reserved["codprd"]])) {
+            $assocProducto[$reserved["codprd"]]["stkprd"]
+                = $assocProducto[$reserved["codprd"]]["stkprd"]
+                  - $reserved["reserved"];
+        }
+    }
+    return $assocProducto;
+}
+
+function productoCatalogoBasculasIndustriales()
+{
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
+    from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBI%');";
+    $tmpProducto =  obtenerRegistros($sqlSelect);
+    $assocProducto = array();
+    foreach ($tmpProducto as $producto) {
+        //Cambiando a imagen predeterminada si no hay imagen
+        $assocProducto[$producto["codprd"]] = $producto;
+        if (preg_match('/^\s*$/', $producto["urlthbprd"])) {
+            $assocProducto[$producto["codprd"]]["urlthbprd"]
+                = "public/imgs/noprodthb.png";
+        }
+    }
+    // Para quitar los reservados de usuario authenticados
+    $timeDelta =  getAuthTimeDelta(); // 6 * 60 * 60; //h , m, s
+    $sqlSelectReserved = "select codprd, sum(crrctd) as reserved
+    from carretilla where TIME_TO_SEC(TIMEDIFF(now(), crrfching)) <= %d
+    group by codprd;
+    ";
+    $arrReserved = obtenerRegistros(
+        sprintf(
+            $sqlSelectReserved,
+            $timeDelta
+        )
+    );
+    foreach ($arrReserved as $reserved) {
+        if (isset($assocProducto[$reserved["codprd"]])) {
+            $assocProducto[$reserved["codprd"]]["stkprd"]
+                = $assocProducto[$reserved["codprd"]]["stkprd"]
+                  - $reserved["reserved"];
+        }
+    }
+    // Para quitar los reservados de usuarion no autenticados
+    $timeDelta = getUnAuthTimeDelta(); // 10 * 60; //h , m, s
+    $sqlSelectReserved = "select codprd, sum(crrctd) as reserved
+    from carretillaanon where TIME_TO_SEC(TIMEDIFF(now(), crrfching)) <= %d
+    group by codprd;
+    ";
+    $arrReserved = obtenerRegistros(
+        sprintf(
+            $sqlSelectReserved,
+            $timeDelta
+        )
+    );
+    foreach ($arrReserved as $reserved) {
+        if (isset($assocProducto[$reserved["codprd"]])) {
+            $assocProducto[$reserved["codprd"]]["stkprd"]
+                = $assocProducto[$reserved["codprd"]]["stkprd"]
+                  - $reserved["reserved"];
+        }
+    }
+    return $assocProducto;
+}
+
+function productoCatalogoBasculasPrecision()
+{
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
+    from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBP%');";
     $tmpProducto =  obtenerRegistros($sqlSelect);
     $assocProducto = array();
     foreach ($tmpProducto as $producto) {

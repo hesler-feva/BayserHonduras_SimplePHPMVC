@@ -25,8 +25,8 @@
             <nav>
                 <div class="logo"><a href="index.php?page=landing">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
-                </div>
-                    <ul >
+                </div class="">
+                    <ul>
                         <li><a href="index.php?page=landing">Inicio</a></li>
                         <li><a href="">Productos</a>
                         <ul>
