@@ -79,7 +79,7 @@ case "pruebalogin":
     include_once "controllers/pruebalogin.control.php";
     die();
 case "loginbayser":
-    include_once "controllers/loginbayser.control.php";
+    include_once "controllers/security/loginbayser.control.php";
     die();
 case "registrarsebayser":
     include_once "controllers/registrarsebayser.control.php";
