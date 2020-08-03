@@ -73,7 +73,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		scroll = $(window).scrollTop();
 
-		if(scroll > 30){
+		if(scroll > 5){
 			if(!flag){
 				$("nav").css({"background-color": "rgba(20, 19, 19, 0.68)"});
 				$("header nav ul li a").css({"color": "white"});

@@ -31,7 +31,7 @@
 
     </section>
     <section>
-        <h1>Ventas</h1>
+        <h1 class="bg-blue">Ventas</h1>
         <div class="informacion">
             <div class="imagenventa col-m-2">
                 <img class="pick" src="public/imgs/negocio.jpg" alt="">

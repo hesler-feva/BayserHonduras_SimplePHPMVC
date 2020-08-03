@@ -15,25 +15,25 @@ body{
 
     
 header{
-    background-color:transparent;
-    height: 49.6167px;
+    width: 100%;
+    height: 1000px;
+    background-color: transparent;
+    -webkit-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 nav{
-    width: 100vw;
-    background-color:rgba(20, 19, 19, 0.68);
-    overflow: auto;
-    margin-top: -30px;
-    text-align: center;
-    position: fixed;
-    margin-bottom: 20px;
-    height: auto;
-    padding:  0;
-    z-index: 10;
-    color:whitesmoke !important;   
+    width: 100%;
+    background-color: rgba(20, 19, 19, 0.68);
+     margin-top: -30px;
+     text-align: center;
+     position: fixed;
+     margin: -px;
+     margin-bottom: 20px;
+     height: auto;
+     padding:  0;
+     z-index: 10;   
 }
 
 header nav ul{
@@ -55,12 +55,13 @@ header nav ul li a{
     padding: 17px 15px;
     text-decoration: none;
     text-align: center;
-    color: whitesmoke !important;
+    color: #333333;
+    color: white;
     transition: all 0.4s linear;
     font-family: 'Baloo Thambi 2', cursive;
     position: relative;
     background: darkgreen(#2196f3,15);
-    text-transform: uppercase;
+    text-transform: initial;
 }
 
 header nav ul li a::before{
@@ -73,7 +74,6 @@ header nav ul li a::before{
     bottom: 0;
     background: #2196f3;
     transition: .3s;
-    color:whitesmoke;
 }
 
 header nav ul li a:hover::before{
@@ -81,154 +81,44 @@ header nav ul li a:hover::before{
     left: 0;
     border: none;
     border-left: 3px solid #2196f3;
-    color:whitesmoke;
 }
 
 ul li ul li {
     float: left;
 }
-    
+        
 ul li ul{
     display: none;
     position: relative;
     width: 200px;
-    padding: 10px 15px;    
+    padding: 10px 15px;
 }
 
 li:hover>ul{
-    display: block;    
+    display: block;
 }
 
 #body{
-    width: 100%;
-    height: 0px;
+	width: 100%;
+	height: 0px;
 }
-
 /*Icono de la empresa*/
 .logo{
     position: relative;
     margin-top: 29px;
     margin-bottom: -10px;
     width: 50px;
-    left: 10px;        
+    left: 10px; 
 }
-    
-.logo .imgnav{        
+
+.logo .imgnav{           
     float: left;
     left: 10px;
     width:100px;
     height: 100%;
     top: 3px;
     margin-bottom: 5px;
-}
-
-/*SLIDER*/
-.contenedor{
-	width: 100%;
-    position: relative;
-    height:  450px;
-
-	
-}
-
-.contenedor .slider-contenedor  ol{
-	list-style: none;
-}
-
-ul,ol{
-	list-style: none;
-}
-
-.slider-contenedor li ul{
-	width: 100%;
-	height: 400px;
-	border-style: groove;
-}
-
-.slider-contenedor li{
-	overflow: hidden;
-}
-
-.slider-contenedor li img{
-	position: relative;
-	width: 100%;
-	height: 450px;	
-	left: 0;
-	top: 0;
-}
-
-.slider-contenedor section{
-	position: absolute;
-	left: 30%;
-	height: 50%;
-	width: 40%;
-	top:430px ;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.slider-contenedor  .slider-informacion{
-	position: absolute;
-	width: 100%;
-	height:10000px;
-	top:  0;
-	left: 0;
-	padding: 15px 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: #fff;
-	z-index: 1;
-}
-
-.slider-contenedor section h1{
-	font-size: 20px;
-	text-align: justify;
-}
-
-.slider-contenedor section p{
-    position: absolute;	
-	font-size: 15px;
-    text-align: justify;
-}
-
-.pagination{
-	position: absolute;
-	top: 90%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.pagination li{
-	font-size: 20px;
-	margin: 2px 5px;
-    color: gray;
-	cursor: pointer;
-}
-
-.left, .rightSlider{
-	position: absolute;
-	top: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	color: #333333;
-	font-size: 35px;
-	cursor: pointer;
-	z-index: 2;
-}
-
-.left{
-	left: 10px;
-}
-
-.rightSlider{
-	right: 10px;
-}
+} 
 
 header .btn_hamburger{
     display: none;
@@ -242,7 +132,7 @@ header .btn_hamburger{
     right: 7px;
     cursor: pointer;
 }
-
+    
 header .btn_hamburger div{
     width: 90%;
     height: 5px;
@@ -250,7 +140,6 @@ header .btn_hamburger div{
     background-color: white;
 }
 
-/*-----------------------------------------------footer--------------------------------------------------*/
 footer {
     position: relative;
     align-self: flex-end;
@@ -333,7 +222,7 @@ footer {
 }
 
 .enlace-mail:hover>.span-email{
-    width: 233px;
+   width: 233px;
     transition: .3s;
     list-style: none;
     text-decoration: none;
@@ -352,7 +241,7 @@ footer {
     color: white;
 }
 
-.ion-ios-email{
+.icon-email{
     position: relative;
 }
 
@@ -386,7 +275,7 @@ footer {
     color: white;
 }
 
-.ion-social-facebook{
+.icon-facebook{
     position: relative;
 }
 
@@ -420,7 +309,7 @@ footer {
     color: white;
 }
 
-.ion-social-whatsapp{
+.icon-whatsapp{
     position: relative;
 }
 
@@ -454,7 +343,7 @@ footer {
     color: white;
 }
 
-.ion-ios-telephone{
+.icon-phone{
     position: relative;
 }
 
@@ -492,20 +381,21 @@ footer  hr{
 }
 
 @media screen and (min-width:320px){
+/*responsive del nav*/
 .logo .imgnav{
     width: 6em;
     height: 3em;
 }
-    
+
 header nav ul li a{
-width: 100vw;
+    width: 100vw;
     font-size: 1em;
 }
-    
+
 .logo{
     left: 35.5vw;
 }
-    
+
 header .btn_hamburger{
     display: flex;
     width: 2em;
@@ -514,19 +404,13 @@ header .btn_hamburger{
     top: 40px;
     right: 15px;
 }
-    
+
 header nav ul{
     overflow: hidden;
     width: 100vw;
     transition: max-height 1s ease-in;    
 }
-
-.hidden ul{
-    overflow: hidden;
-    width: 100vw;
-    transition: max-height 1s ease-in;
-}
-        
+    
 header nav ul.hidden{
     max-height: 0vh;
     transition: max-height 1s ease-in;
@@ -539,9 +423,10 @@ header nav ul.hidden .btn_hamburger div:nth-child(1){
 
 header nav ul.hidden .btn_hamburger div:nth-child(3){
     width: 60%;
-    transition: width 0.1s linear;
+        transition: width 0.1s linear;
 }
-     
+
+
 /*responsive del footer*/
 .col-3{
     display: block;
@@ -552,7 +437,7 @@ header nav ul.hidden .btn_hamburger div:nth-child(3){
     flex-basis: calc(100%/1);
     margin-bottom: 5px;
 }
-    
+
 footer{
     flex-basis: 100%;
 }
@@ -567,12 +452,13 @@ footer{
     font-size: 12px;
     flex-wrap: wrap;
 }
-    
+
 .icono-ubicacion{
     display: inline;
+    /* height: inherit; */
 }
 
-.ion-location{
+.icon-location{
     font-size: 30px;
 }
 
@@ -581,12 +467,13 @@ footer{
     justify-content: center;
     text-align: center;
 }
-    
+
 .icono-horario{
     display: inline;
+    /* height: inherit; */
 }
 
-.ion-android-alarm-clock{
+.icon-time{
     font-size: 30px;
 }
 
@@ -595,7 +482,7 @@ footer{
     justify-content: center;
     text-align: center;
 }
-    
+
 .socios{
     height: auto;
 }
@@ -604,7 +491,7 @@ footer{
     width: 30%;
     height: 25px;
 }
-    
+
 .pregunta{
     flex-basis: 100%;
     height: 100px;
@@ -614,7 +501,7 @@ footer{
     flex-basis: calc(100%/1.8);
     font-size: 20px;
 }
-    
+
 .Copyright{
     height: 50px;
     flex-basis: 100%;
@@ -626,8 +513,10 @@ footer{
     flex-basis: 100%;
 }
 }
-    
+
+
 @media screen and (min-width:481px){
+/*responsive del nav*/
 .logo .imgnav{
     width: 8em;
     height: 5em;
@@ -651,18 +540,12 @@ header .btn_hamburger{
     right: 15px;
 }
 
-.hidden ul{
-    overflow: hidden;
-    width: 100vw;
-    transition: max-height 1s ease-in;
-}
-
 header nav ul{
     overflow: hidden;
     width: 100vw;
     transition: max-height 1s ease-in;    
 }
-        
+    
 header nav ul.hidden{
     max-height: 0vh;
     transition: max-height 1s ease-in;
@@ -672,12 +555,12 @@ header nav ul.hidden .btn_hamburger div:nth-child(1){
     width: 60%;
     transition: width 0.1s linear;
 }
-    
+
 header nav ul.hidden .btn_hamburger div:nth-child(3){
     width: 60%;
     transition: width 0.1s linear;
 }
-    
+
 /*responsive del footer*/
 .col-3{
     flex-basis: calc(100%/3);
@@ -693,7 +576,7 @@ footer{
     flex-direction: row;
     box-shadow: 0px 2px 3px #ffff;
 }
-        
+    
 .icono-ubicacion{
     display: flex;
     flex-direction: row;
@@ -708,7 +591,7 @@ footer{
     justify-content: space-evenly;
     align-items: center;
 }
-        
+    
 .horario{
     display: flex;
     justify-content: center;
@@ -718,7 +601,7 @@ footer{
 .informacion-horario{
     display: inline;
 }
-        
+    
 .socios{
     display: flex;
     justify-content: center;
@@ -737,12 +620,12 @@ footer{
     height: 130px;
     align-items: center;
 }
-    
-.ion-location{
+
+.icon-location{
     font-size: 35px;
 }
 
-.ion-android-alarm-clock{
+.icon-time{
     font-size: 35px;
 }
 
@@ -750,7 +633,7 @@ footer{
     width: 30%;
     height: 25px;
 }
-    
+
 .pregunta{
     flex-basis: 100%;
     height: 130px;
@@ -766,14 +649,16 @@ footer{
     flex-basis: 100%;
     font-size:  15px;
 }
-    
+
 .titulo-footer{
     font-size:  20px;
     flex-basis: 100%;
 }
 }
-    
+
+
 @media screen and (min-width:768px){
+/*responsive del nav*/
 .logo .imgnav{
     width: 8.5em;
     height: 5em;
@@ -787,7 +672,7 @@ header nav ul li a{
 .logo{
     left: 43.5vw;
 }
-        
+    
 header .btn_hamburger{
     display: flex;
     transition: width 0.5s ease-in;
@@ -803,13 +688,7 @@ header nav ul{
     width: 100vw;
     transition: max-height 1s ease-in;    
 }
-
-.hidden ul{
-    overflow: hidden;
-    width: 100vw;
-    transition: max-height 1s ease-in;
-}
-       
+   
 header nav ul.hidden{
     max-height: 0vh;
     transition: max-height 1s ease-in;
@@ -824,7 +703,8 @@ header nav ul.hidden .btn_hamburger div:nth-child(3){
     width: 60%;
     transition: width 0.1s linear;
 }
-    
+
+}
 /*responsive del footer*/
 .col-3{
     flex-basis: calc(100%/3);
@@ -843,12 +723,12 @@ footer{
     flex-basis: 100%;
     font-size: 12px;
 }
-    
-.ion-location{
+
+.icon-location{
     font-size: 35px;
 }
 
-.ion-android-alarm-clock{
+.icon-time{
     font-size: 35px;
 }
 
@@ -856,7 +736,7 @@ footer{
     width: 40%;
     height: 35px;
 }
-    
+
 .pregunta{
     flex-basis: 100%;
     height: 130px;
@@ -866,7 +746,7 @@ footer{
     flex-basis: calc(100%/3.4);
     font-size: 25px;
 }
-    
+
 .Copyright{
     height: 50px;
     flex-basis: 100%;
@@ -877,9 +757,10 @@ footer{
     font-size:  20px;
     flex-basis: 100%;
 }
-}
-    
+
+
 @media screen and (min-width:1025px){
+/*responsive del nav*/
 .logo .imgnav{
     width: 6em;
     height: 2.9em;
@@ -887,9 +768,10 @@ footer{
 
 .col-3{
     flex-basis: calc(100%/3);
-} 
+}
+
+/*nav*/
         
-/*nav*/        
 header nav ul li a{
     width: 100%;
     font-size: 18px;
@@ -899,7 +781,7 @@ header .btn_hamburger{
     display: none;
     overflow: hidden;
 }
-        
+
 .logo{
     left: 10px;
 }
@@ -909,7 +791,7 @@ header nav ul{
     width: 100vw;
     transition: max-height 1s ease-in;    
 }
-        
+
 ul li ul li {
     float: left;
 }
@@ -920,7 +802,7 @@ ul li ul{
     width: 200px;
     padding: 10px 15px;        
 }
-        
+
 li:hover>ul{
     display: block;        
 }
@@ -929,7 +811,7 @@ header nav ul.hidden{
     max-height: 100vh;
     transition: max-height 1s ease-in;
 }   
-            
+    
 header nav ul.hidden .btn_hamburger div:nth-child(1){
     width: 60%;
     transition: width 0.1s linear;
@@ -939,9 +821,6 @@ header nav ul.hidden .btn_hamburger div:nth-child(3){
     width: 60%;
     transition: width 0.1s linear;
 }
-    
-   
-/*responsive del footer*/
 .col-3{
     flex-basis: calc(100%/3);
 }
@@ -949,7 +828,7 @@ header nav ul.hidden .btn_hamburger div:nth-child(3){
 footer{
     flex-basis: 100%;
 }
-        
+
 .redes-sociales{
     flex-basis: 100%;
     font-size: 40px;
@@ -959,16 +838,16 @@ footer{
     flex-basis: 100%;
 }
 
-.ion-location{
+.icon-location{
     font-size: 40px;
 }
-        
+
 .informacion-ubicacion{
     display: inline;
     font-size: 13px;
 }
 
-.ion-android-alarm-clock{
+.icon-time{
     font-size: 40px;
 }
 
@@ -981,7 +860,7 @@ footer{
     width: 50%;
     height: 45px;
 }
-        
+
 .icono-ohaus{
     font-size: 13px;
 }
@@ -995,7 +874,7 @@ footer{
     flex-basis: calc(100%/3.5);
     font-size: 30px;
 }
-        
+
 .Copyright{
     height: 50px;
     flex-basis: 100%;

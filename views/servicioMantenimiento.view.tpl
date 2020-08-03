@@ -40,7 +40,7 @@
     <section>
 
        
-        <h1>Mantenimiento</h1>
+        <h1 class="bg-blue">Mantenimiento</h1>
         <div class="informacion">
             <div class="imagenventa col-m-2">
                 <img class="pick" src="public/imgs/man1.jpeg" alt="">
