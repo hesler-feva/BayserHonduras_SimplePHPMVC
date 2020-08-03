@@ -9,18 +9,12 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
             <link rel="stylesheet" href="public/css/papier.css" />
-            <!--<link rel="stylesheet" href="public/css/estilo.css" />-->
+            <link rel="stylesheet" href="public/css/estilo.css" />
             <link rel="stylesheet" href="public/css/plantilla.css" />
-<<<<<<< HEAD
-            <!--<link rel="stylesheet" href="public/css/pruebalogin.css" />-->
-            <!--<script src="public/js/jquery.min.js"></script>-->
-            <!--<script src="public/js/hamburguer.js"></script>-->
-=======
             <link rel="stylesheet" href="public/css/pruebalogin.css" />
             <script src="public/js/jquery.min.js"></script>
              <script src="public/js/productos.js"></script>
             <script src="public/js/hamburguer.js"></script>
->>>>>>> b3dc6214f0fb65dd80c42b8a4e600cb033b45a54
             {{foreach css_ref}}
                 <link rel="stylesheet" href="{{uri}}" />
             {{endfor css_ref}}
