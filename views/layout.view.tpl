@@ -9,10 +9,11 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
             <link rel="stylesheet" href="public/css/papier.css" />
-            <link rel="stylesheet" href="public/css/estilo.css" />
+            <!--<link rel="stylesheet" href="public/css/estilo.css" />-->
             <link rel="stylesheet" href="public/css/plantilla.css" />
             <link rel="stylesheet" href="public/css/pruebalogin.css" />
             <script src="public/js/jquery.min.js"></script>
+             <script src="public/js/productos.js"></script>
             <script src="public/js/hamburguer.js"></script>
             {{foreach css_ref}}
                 <link rel="stylesheet" href="{{uri}}" />
@@ -25,8 +26,7 @@
                 <div class="logo"><a href="index.php?page=landing">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
                 </div>
-                <div class="menu">
-                    <ul>
+                    <ul >
                         <li><a href="index.php?page=landing">Inicio</a></li>
                         <li><a href="">Productos</a>
                         <ul>
@@ -45,9 +45,13 @@
                         <li><a href="index.php?page=formCotizar">Cotizaciones</a></li>
                         <li><a href="index.php?page=formRecomendar">Recomendaciones</a></li>
                         <li><a href="index.php?page=loginbayser">Iniciar Sesion</a></li>
+                    
+                        <div class="btn_hamburger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </ul>
-                    <div class="hbtn"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
-                </div>
             </nav>      
          </header>
           <!--Esto no se toca!!!-->
