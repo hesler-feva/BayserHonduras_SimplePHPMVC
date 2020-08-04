@@ -23,7 +23,7 @@
             <!--Barra nav-->
           <header>
             <nav>
-                <div class="logo"><a href="index.php?page=landing">
+                <div class="logo"><a href="index.php?page=index">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
                 </div class="">
                     <ul>
