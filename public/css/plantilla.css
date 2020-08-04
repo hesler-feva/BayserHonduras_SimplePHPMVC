@@ -235,6 +235,121 @@ ul,ol{
 	right: 22px;
 }
 
+.btn1, .btn2, .btn3{
+	padding: 2.5rem 7rem;
+	background: gray;
+	border: 0.1rem solid rgb(106, 150, 185);
+	cursor:  pointer;
+	position: relative;
+	border-radius: .3rem;
+	overflow: hidden;
+	width: 10%;
+	top: -150px;
+	left: 0px;   
+}
+
+.btn1::before {
+	content: "Basculas De Precisión";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	font-weight: 700;
+	text-shadow: .1rem .1rem .1rem #333;
+	transition: .2s ease;
+}
+
+.btn1::after{
+	content: "Bayser Honduras";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: translate(-50%,-50%) scale(0) ;
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+ .btn2::before {
+	content: "Basculas Comerciales";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn2::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn3::before {
+	content: "Basculas Industriales";
+	position: absolute;
+	top: 20%;
+	left: 2%;
+	translate: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+}
+
+.btn3::after{
+    content: "Bayser Honduras";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: translate(-50%,-50%) scale(0) ;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.btn1:hover::before,.btn2:hover::before,.btn3:hover::before{
+    transform: translate(-50%,-50%) scale(3);
+    opacity: 0;
+}
+
+.btn1:hover::after,.btn2:hover::after,.btn3:hover::after{
+	transform: translate(-50%,-50%) scale(1);
+	opacity: 1;
+}
 header .btn_hamburger{
     display: none;
     flex-direction: column;
