@@ -510,7 +510,8 @@ svg,rect{
 .caja_columna{
     width: 150%;
     height: 440px;
-    margin: 10px;
+    margin: 20px;
+    top: -50px;
 }
 
 .caja_columna .texto{
@@ -522,7 +523,7 @@ svg,rect{
 }
 
 .caja_columna .texto h2{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .caja_columna .texto p{
