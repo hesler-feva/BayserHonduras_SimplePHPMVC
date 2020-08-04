@@ -1227,17 +1227,33 @@ footer  hr{
         align-items: center;
     }
     
-    .icon-location{
-        font-size: 35px;
+    .informacion-ubicacion{
+        display: inline;
+        font-size: 11px;
     }
     
-    .icon-time{
-        font-size: 35px;
+    
+    .informacion-horario{
+        display: inline;
+        font-size: 9px;
+    }
+    
+
+    .icono-ubicacion{
+        font-size: 20px;
+    }
+    
+    .icono-horario{
+        font-size: 20px;
     }
     
     .icono-socio-ohaus{
         width: 30%;
-        height: 25px;
+        height: 20px;
+    }
+    
+    .icono-ohaus{
+        font-size: 9px;
     }
     
     .pregunta{
@@ -1510,20 +1526,36 @@ footer  hr{
     
     .container{
         flex-basis: 100%;
-        font-size: 12px;
+        font-size: 100%;
     }
     
-    .icon-location{
-        font-size: 35px;
+    .informacion-ubicacion{
+        display: inline;
+        font-size: 11px;
     }
     
-    .icon-time{
-        font-size: 35px;
+    
+    .informacion-horario{
+        display: inline;
+        font-size: 11px;
+    }
+    
+
+    .icono-ubicacion{
+        font-size: 25px;
+    }
+    
+    .icono-horario{
+        font-size: 25px;
     }
     
     .icono-socio-ohaus{
         width: 40%;
-        height: 35px;
+        height: 30px;
+    }
+    
+    .icono-ohaus{
+        font-size: 11px;
     }
     
     .pregunta{
@@ -1825,8 +1857,8 @@ footer  hr{
         flex-basis: 100%;
     }
     
-    .icon-location{
-        font-size: 40px;
+    .icono-ubicacion{
+        font-size: 30px;
     }
     
     .informacion-ubicacion{
@@ -1834,8 +1866,8 @@ footer  hr{
         font-size: 13px;
     }
     
-    .icon-time{
-        font-size: 40px;
+    .icono-horario{
+        font-size: 30px;
     }
     
     .informacion-horario{
