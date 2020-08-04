@@ -35,9 +35,9 @@ require_once "controllers/mw/site.mw.php";
     //Este switch se encarga de todo el enrutamiento público
 switch ($pageRequest) {
     //Accesos Publicos
-case "home":
+case "landing":
     //llamar al controlador
-    include_once "controllers/home.control.php";
+    include_once "controllers/landing.control.php";
     die();
 case "login":
     include_once "controllers/security/login.control.php";
