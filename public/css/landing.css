@@ -1,0 +1,479 @@
+body{
+    background-image: url(../imgs/fondo_1025.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenido{
+    /* background: red;*/
+    /* height: 100vh;*/
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+ 
+ .col-4{
+     display: flex;
+     /*flex-basis: calc(100%/3);*/
+   /*  border: 1px solid blue;*/
+     flex-wrap: wrap;
+     height: 100vh;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+  /* Boton */
+  .boton_p{
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     font-family: consolas;
+     z-index: 3;    
+ }   
+ 
+ /*Este es el rectangulo del boton*/
+ .boton{
+     position: relative;
+     display: inline-block;
+     padding: 15px 30px;
+     color: #2196f3;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     text-decoration: none;
+     /*font-size: 24px;*/
+     overflow: hidden;
+     transition: 0.2s;
+     background-color: rgba(20, 19, 19, 0.68);
+     z-index: 4;
+ }
+ 
+ .boton span{
+     position: absolute;
+     display: block;
+ }
+ 
+ a span:nth-child(1){
+     top:0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg,transparent,#2196f3);
+ }
+ 
+ a:hover span:nth-child(1){
+     left: 100px;
+     transition: 1s;
+ }
+ 
+ a span:nth-child(3){
+     bottom:0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(270deg,transparent,#2196f3);
+ }
+ 
+ 
+ a:hover span:nth-child(3){
+     right: 100px;
+     transition: 1s;
+     transition-delay: 0.5s;
+ }
+ 
+ a span:nth-child(2){
+     top:-100%;
+     right: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg,transparent,#2196f3);
+ }
+ 
+ a:hover span:nth-child(2){
+     top: 100%;
+     transition: 1s;
+     transition-delay: 0.25s;
+ }
+ 
+ a span:nth-child(4){
+     bottom:-100%;
+     left: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(360deg,transparent,#2196f3);
+ }
+ 
+ a:hover span:nth-child(4){
+     bottom: 100%;
+     transition: 1s;
+     transition-delay: 0.75s;
+ }
+ 
+ /* Frase */
+ .contenedor{
+     margin: auto;
+   /*  width: 79%;
+     right: 500px;*/
+ }
+ 
+ .caja_columna{
+     color: #fff;
+     background: transparent; 
+     background-color: rgba(20, 19, 19, 0.68);
+     position: relative;
+     text-align: center;
+   /*  width: 98%;
+     height: 440px;
+     margin: 10px;*/
+ }
+ 
+ 
+ .caja_columna .texto{
+     position: absolute;
+    /* top: 15px;
+     left: 15px;
+     right: 15px;
+     bottom: 15px;*/
+     border: 2px solid #2196f3;
+     /*padding: 30px;*/
+ }
+ 
+ .caja_columna .texto h2{
+    /* font-size: 40px;*/
+     margin: 0 0 10px;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     color: #2196f3;
+ }
+ 
+ .caja_columna .texto p{
+    /* font-size: 18px;*/
+     text-transform: uppercase;
+ }
+ 
+ svg,rect{
+   /*  top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;*/
+     fill: transparent;
+ }
+ 
+ rect{
+     stroke: #2196f3;
+     stroke-width: 4;
+     stroke-dasharray: 400;
+     animation: animate 4s linear infinite;
+ }
+ 
+ .caja .contenedor{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ 
+ @keyframes animate{
+     0%{
+         stroke-dashoffset: 800;
+ 
+     }
+ 
+     100%{
+         stroke-dashoffset: 0;
+     }
+ }
+ 
+ 
+ .imagenlogo{
+     width: 100%;
+ }
+ 
+ .pick{
+     width: 100%;
+     height: auto;
+ }
+
+
+ @media screen and (min-width:320px){
+    .col-4{
+        flex-basis: calc(100%/3);
+        height: 800px;
+    }
+    
+    .boton{
+        /*display: inline-block;*/
+        font-size: 24px;
+    }
+    
+    /* Frase */
+    
+    .contenido{
+        /* background: red;*/
+         /*height: 800px;*
+         /*background: red;*/
+         /*display: flex;*/
+         flex-direction: column;
+    /*     flex-wrap: wrap;*/
+    height: 100vh;
+     }
+     
+    .contenedor{
+     /*   height: 2px;*/
+        margin-top: 10px;
+        width: 100%;
+        right: 500px;
+      /*  background: red;*/
+    }
+    
+    .caja_columna{
+      /*  top: 50px;*/
+        width: 98%;
+        height: 200px;
+        margin: 10px;
+    }
+    
+    .caja_columna .texto{
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        padding: 30px;
+    }
+    
+    .caja_columna .texto h2{
+        font-size: 1.2em;
+    }
+    
+    .caja_columna .texto p{
+        font-size: .7em;
+    }
+    
+    svg,rect{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .imagenlogo{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .pick{
+        width: 50%;
+        height: auto;
+    }
+    
+    
+    
+
+ }
+
+ @media screen and (min-width:481px){
+ /*responsive del body*/
+
+.contenido{
+    /* background: red;*/
+    /* height: 800px;*/
+     /*background: red;*/
+     /*display: flex;*/
+     flex-direction: column;
+/*     flex-wrap: wrap;*/
+    height: 100vh;
+ }
+ 
+.contenedor{
+    height: 50px;
+    width: 100%;
+    right: 500px;
+   /* background: green;*/
+}
+
+.caja_columna{
+    top: 0;
+    width: 110%;
+    height: 200px;
+    margin: 10px;
+}
+
+.caja_columna .texto{
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 7px;
+}
+
+.caja_columna .texto h2{
+    font-size: 1.2em;
+}
+
+.caja_columna .texto p{
+    font-size: .8em;
+}
+
+svg,rect{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenlogo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pick{
+    width: 50%;
+    height: auto;
+}
+
+}
+@media screen and (min-width:768px){
+/*responsive del body*/
+.col-4{
+    flex-basis: calc(100%/3);
+    height: 100vh;
+}
+
+.boton{
+    /*display: inline-block;*/
+    font-size: 1.4em;
+}
+
+/* Frase */
+
+.contenido{
+    /* background: red;*/
+     /*height: 100vh;*/
+     /*display: flex;*/
+     flex-direction: row;
+/*     flex-wrap: wrap;*/
+ }
+ 
+.contenedor{
+    width: 105%;
+    right: 500px;
+    height: auto;
+   /* background: blue;*/
+}
+
+.caja_columna{
+    top: 0;
+    width: 100%;
+    height: 410px;
+    margin: 10px;
+}
+
+.caja_columna .texto{
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 30px;
+}
+
+.caja_columna .texto h2{
+    font-size: 1.6em;
+}
+
+.caja_columna .texto p{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+svg,rect{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenlogo{
+    width: 100%;
+}
+
+.pick{
+    width: 100%;
+    height: auto;
+}
+}
+
+@media screen and (min-width:1025px){
+/*responsive del body*/
+.col-4{
+    flex-basis: calc(100%/3);
+    height: 100vh;
+}
+
+.boton{
+    /*display: inline-block;*/
+    font-size: 24px;
+}
+
+/* Frase */
+
+
+.contenido{
+    align-items: center;
+    /* background: red;*/
+     /*height: 100vh;*/
+     /*display: flex;*/
+     flex-direction: row;
+/*     flex-wrap: wrap;*/
+ }
+ 
+
+.contenedor{
+    width: 100%;
+    right: 500px;
+    height: auto;
+  /* background: blanchedalmond;*/
+}
+
+.caja_columna{
+    width: 100%;
+    height: 440px;
+    margin: 10px;
+}
+
+.caja_columna .texto{
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 30px;
+}
+
+.caja_columna .texto h2{
+    font-size: 30px;
+}
+
+.caja_columna .texto p{
+    font-size: 20px;
+    width: 100%;
+    padding: 0px;
+}
+
+svg,rect{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenlogo{
+    width: 100%;
+}
+
+.pick{
+    width: 100%;
+    height: auto;
+}
+
+}
