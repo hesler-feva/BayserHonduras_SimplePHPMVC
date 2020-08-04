@@ -64,6 +64,7 @@
             if($viewData["mode"]=="UPD" && (isset($_POST["btnDelRol"]) || isset($_POST["btnAddRol"]))){
                 $viewData["isRolEdit"] = true;
             }else{
+              //Aqui voy a cambiar que datos ingresar 
               $viewData["useremail"] = $_POST["txtCorreo"];
               $viewData["username"] = $_POST["txtName"];
               $viewData["usertipo"] =  $_POST["cmbTipo"];
@@ -125,6 +126,7 @@
                 }
                 $viewData["modeDesc"] = "Nuevo Usuario";
                 break;
+                //borrar esto por que no actualizamos empleados XD
               case 'UPD':
                   if(!$viewData["haserrores"] && $viewData["usrcod"] > 0){
                     //Si es un boton de rol o el boton de usuario
