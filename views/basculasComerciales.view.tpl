@@ -3,19 +3,19 @@
         <li>
             <img src="public/imgs/landing-comerciales.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="index.php?page=basculasComerciales"> <button class="btn2"></button> </a>
+                <a href="index.php?page=basculasComerciales"><button class="btn2"></button></a>
             </section>
         </li>
         <li>
             <img src="public/imgs/landing-industrial.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="index.php?page=basculasIndustriales"> <button class="btn3"></button> </a>
+             <a href="index.php?page=basculasIndustriales"><button class="btn3"></button></a>
             </section>
         </li>
         <li>
             <img src="public/imgs/landing-precision.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="index.php?page=basculasPrecision"> <button class="btn1"></button> </a>
+               <a href="index.php?page=basculasPrecision"><button class="btn1"></button></a>           
             </section>
         </li>
     </ul>
