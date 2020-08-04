@@ -43,7 +43,7 @@
       </span>
       <span class="col-12 center depth-1 m-padding card-desc">
           <span class="card-side">{{skuprd}}</span>
-          <span class="col-12">{{nombre}}</span>
+          <span class="col-12">{{dscprd}}</span>
       </span>
       <span class="col-12 center depth-1 m-padding">
         <span class="col-6 m-padding">Disponibles</span>

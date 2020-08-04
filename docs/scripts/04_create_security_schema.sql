@@ -57,9 +57,11 @@ CREATE TABLE `funciones_roles` (
 
 CREATE TABLE `productos` (
   `codprd` BIGINT(18) NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(70) NOT NULL,
   `dscprd` VARCHAR(255) NOT NULL,
+  `sdscprd` VARCHAR(255) NOT NULL,
+  `ldscprd` TEXT NULL,
   `skuprd` varchar(6) not null,
+  `bcdprd` VARCHAR(128) NOT NULL,
   `stkprd` INT NOT NULL,
   `typprd` CHAR(3) NOT NULL,
   `prcprd` DECIMAL(12,2) NOT NULL,
@@ -67,6 +69,7 @@ CREATE TABLE `productos` (
   `urlthbprd` VARCHAR(255) NULL,
   `estprd` CHAR(3) NOT NULL,
   `categoria_id` INT NOT NULL,
+  `nombre` VARCHAR(70) NOT NULL,
   CONSTRAINT `categorias_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`catid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
    PRIMARY KEY (`codprd`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
