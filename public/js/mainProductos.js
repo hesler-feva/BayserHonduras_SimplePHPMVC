@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 	// Ejecutamos todas las funciones
 	$('.pagination li').click(pagination);
-	$('.right span').click(nextSlider);
+	$('.rightSlider span').click(nextSlider);
 	$('.left span').click(prevSlider);
 
 
