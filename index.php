@@ -75,9 +75,6 @@ case "quienesSomos":
 case "formRecomendar":
     include_once "controllers/formRecomendar.control.php";
     die();  
-case "pruebalogin":
-    include_once "controllers/pruebalogin.control.php";
-    die();
 case "loginbayser":
     include_once "controllers/security/loginbayser.control.php";
     die();
