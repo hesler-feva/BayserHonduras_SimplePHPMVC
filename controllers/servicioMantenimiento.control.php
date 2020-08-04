@@ -3,9 +3,8 @@
 
   function run(){
     addCssRef("public/css/venta.css");
-    addJsRef("public/js/productos.js");
-    addJsRef("public/js/mainProductos.js");
-    addJsRef("public/js/jqueryProductos.js");
+    addJsRef("public/js/jqueryInstalaciones.js");
+    addJsRef("public/js/mainInstalaciones.js");
     renderizar("servicioMantenimiento",Array());
   }
   run();

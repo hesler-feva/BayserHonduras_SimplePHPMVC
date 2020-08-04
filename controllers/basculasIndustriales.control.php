@@ -26,9 +26,10 @@ function run()
     $arrDataView = array();
     $arrDataView["productos"] = productoCatalogoBasculasIndustriales();
     addJsRef("public/css/productos.css");
+    addJsRef("public/css/papier.css");
     //addJsRef("public/js/productos.js");
-    addJsRef("public/js/mainProductos.js");
-    addJsRef("public/js/jqueryProductos.js");
+    //addJsRef("public/js/mainProductos.js");
+    //ddJsRef("public/js/jqueryProductos.js");
     renderizar("basculasIndustriales", $arrDataView);
 }
 run();

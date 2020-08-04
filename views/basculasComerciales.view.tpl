@@ -21,9 +21,11 @@
     </ul>
     <ol class="pagination">
     </ol>
+    
     <div class="left">
         <span class="ion-android-arrow-dropleft-circle"></span>
     </div>
+    
     <div class="rightSlider">
         <span class="ion-android-arrow-dropright-circle"></span>
     </div>

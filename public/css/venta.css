@@ -90,18 +90,18 @@ ul,ol{
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: #2196f3;
+	color: #007c15;
 	font-size: 35px;
 	cursor: pointer;
 	z-index: 2;
 }
 
 .left{
-	left: 10px;
+	left: 20px;
 }
 
 .right{
-	right: 10px;
+	right: 20px;
 }
 
 /*CUERPO*/
