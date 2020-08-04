@@ -25,6 +25,7 @@ function run()
 {
     $arrDataView = array();
     $arrDataView["productos"] = productoCatalogoBasculasComerciales();
+    addJsRef("public/css/plantilla.css");
     addJsRef("public/js/productos.js");
     addJsRef("public/js/mainProductos.js");
     addJsRef("public/js/jqueryProductos.js");
