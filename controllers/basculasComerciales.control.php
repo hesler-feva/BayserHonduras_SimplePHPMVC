@@ -14,7 +14,7 @@
  */
  // Sección de requires
 
-require_once "models/mantenimiento/productos.models.php";
+require_once "models/mantenimientos/productos.model.php";
 
 /**
  * Corre el Controlador
