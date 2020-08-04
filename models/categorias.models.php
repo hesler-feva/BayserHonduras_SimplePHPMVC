@@ -1,24 +1,26 @@
-<?php
+<?php 
 
 require_once 'libs/dao.php';
 
-function obtenerCategorias(){
+function obtenerCategorias()
+{
     $categorias = array();
-    $sqlsrt = "SELECT * FROM categorias;";
-    $categorias = obtenerRegistros($sqlsrt);
+    $sqlstr = "SELECT * from categorias;";
+    $categorias = obtenerRegistros($sqlstr);
     return $categorias;
 }
 
-function obtenerCategoriasXId($catid){
+function obtenerCategoriaXId($catid)
+{
     $arrCategoria = array();
-    $sqlstr = "SELECT * FROM categorias where catid = %d;";
-    //obtener un registro esta en la libreria dao
+    $sqlstr = "SELECT * from categorias where catid=%d;";
     $arrCategoria = obtenerUnRegistro(sprintf($sqlstr, $catid));
     return $arrCategoria;
 }
 
-function addNuevaCategoria($catdsc, $catest){
-    $sqlINS = "INSERT INTO categorias (catdsc, catest) value ('%s', '%s');";
+function addNuevaCategoria($catdsc, $catest)
+{
+    $sqlINS = "INSERT INTO categorias (catdsc, catest) value ('%s' , '%s');";
     ejecutarNonQuery(
         sprintf(
             $sqlINS,
@@ -30,7 +32,8 @@ function addNuevaCategoria($catdsc, $catest){
     return $id;
 }
 
-function actualizarCategoria($catid, $catdsc, $catest){
+function actualizarCategoria($catid, $catdsc, $catest)
+{
     $sqlUPD = "UPDATE categorias set catdsc='%s', catest='%s' where catid=%d;";
     return ejecutarNonQuery(
         sprintf(
@@ -42,14 +45,15 @@ function actualizarCategoria($catid, $catdsc, $catest){
     );
 }
 
-function eliminarCategoria($catid){
+function eliminarCategoria($catid)
+{
     $sqlDEL = "DELETE from categorias where catid=%d;";
     return ejecutarNonQuery(
         sprintf(
             $sqlDEL,
             $catid
         )
-        );
+    );
 }
 
 ?>

@@ -58,8 +58,8 @@ function todosLosProductos()
  */
 function productoCatalogoBasculasComerciales()
 {
-    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
-        from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBC%');";
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd
+        from productos where estprd in('ACT','DSC');";
     $tmpProducto =  obtenerRegistros($sqlSelect);
     $assocProducto = array();
     foreach ($tmpProducto as $producto) {

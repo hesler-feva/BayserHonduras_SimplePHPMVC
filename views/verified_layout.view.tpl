@@ -4,6 +4,7 @@
             <meta charset="utf-8" />
             <title>{{page_title}}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
             <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
             <link rel="stylesheet" href="public/css/papier.css" />
             <link rel="stylesheet" href="public/css/estilo.css" />
@@ -39,7 +40,7 @@
             </div>
 
             <div class="footer">
-                Derechos Reservados 2018
+                Derechos Reservados 2020
             </div>
             {{foreach js_ref}}
                 <script src="{{uri}}"></script>

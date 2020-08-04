@@ -1,38 +1,4 @@
-<div class="contenedor">
-    <ul class="slider-contenedor">
-        <li>
-            <img src="public/imgs/landing-comerciales.jpg" alt="">
-            <section class="Slider-informacion">
-                <a href="index.php?page=basculasComerciales"><button class="btn2"></button></a>
-            </section>
-        </li>
-        <li>
-            <img src="public/imgs/landing-industrial.jpg" alt="">
-            <section class="Slider-informacion">
-             <a href="index.php?page=basculasIndustriales"><button class="btn3"></button></a>
-            </section>
-        </li>
-        <li>
-            <img src="public/imgs/landing-precision.jpg" alt="">
-            <section class="Slider-informacion">
-               <a href="index.php?page=basculasPrecision"><button class="btn1"></button></a>           
-            </section>
-        </li>
-    </ul>
-    <ol class="pagination">
-    </ol>
-    
-    <div class="left">
-        <span class="ion-android-arrow-dropleft-circle"></span>
-    </div>
-    
-    <div class="rightSlider">
-        <span class="ion-android-arrow-dropright-circle"></span>
-    </div>
-</div>
-
 <section class="cards row">
-<h1 class="titulo-bascula bg-blue">Basculas de Comerciales</h1>
   {{foreach productos}}
   <section class="col-12 col-sm-6 col-md-3 m-padding">
     <div class="card col-12 depth-2 m-padding">
@@ -51,7 +17,7 @@
         <span class="col-12 bold center m-padding">
           <a href="index.php?page=addtocart&codprd={{codprd}}"
             class="l-padding btn btn-primary col-12 sendToCart">
-            L {{prcprd}} <span class="ion-android-add-circle"></span>
+            L {{prcprd}} <span class="ion-plus-circled"></span>
           </a>
         </span>
       </span>
@@ -92,5 +58,3 @@
       transform: rotate(-90deg);
   }
 </style>
-
-

@@ -25,33 +25,8 @@
             <nav>
                 <div class="logo"><a href="index.php?page=index">
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
-                <ul class>
-                    <li><a href="../bayser diseño 2/landing.html">Inicio</a></li>
-                    <li><a href="">Productos</a>
-                        <ul class=>
-                            <li><a href="../productos/html/basculas_precision.html">Basculas de Precision</a></li>
-                            <li><a href="../productos/html/basculas_industriales.html">Basculas de Industriales</a></li>
-                            <li><a href="../productos/html/basculas_comerciales.html">Basculas de Comerciales</a></li>
-                        </ul></li>
-
-                    <li><a href="">Servicios</a>
-                        <ul >
-                            <li><a href="../Ventas/venta.html">Venta</a></li>
-                            <li><a href="../Instalaciones/instalacion.html">Instalación</a></li>
-                            <li><a href="../Mantenimiento/mante.html">Mantenimiento</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../quienes_somos/quienes_somos.html">Quienés Somos</a></li>
-                    <li><a href="formulario1.html">Cotizaciones</a></li>
-                    <li><a href="../Formulario 2/formulario2.html">Recomendaciones</a></li>
-                    <div class="btn_hamburger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </ul> 
-                <!--
-                    <ul class="hidden"
+                </div class="">
+                    <ul>
                         {{if cartEntries}}
                         <li><a href="index.php?page=cartanon"><span class="ion-ios-cart"></span> <span id="cartcounter">{{cartEntries}}</span> </a></li>
                         {{endif cartEntries}}
@@ -79,7 +54,7 @@
                             <div></div>
                             <div></div>
                         </div>
-                    </ul>-->
+                    </ul>
             </nav>    
          </header>
           <!--Esto no se toca!!!-->

@@ -1,6 +1,6 @@
 
 .contenedor{
-	width: 103%;
+	width: 100%;
     position: relative;
     height:  450px;
 }
@@ -14,7 +14,7 @@ ul,ol{
 }
 
 .slider-contenedor li ul{
-	width: 105%;
+	width: 100%;
 	height: 400px;
 	border-style: groove;
 }
@@ -28,7 +28,7 @@ ul,ol{
 	width: 100%;
 	height: 450px;	
 	left: 0;
-	top: 0px;
+	top: 0;
 }
 
 .slider-contenedor section{
@@ -90,7 +90,7 @@ ul,ol{
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: gray;
+	color: #2196f3;
 	font-size: 35px;
 	cursor: pointer;
 	z-index: 2;
@@ -105,6 +105,7 @@ ul,ol{
 }
 
 /*CUERPO*/
+
 .informacion{
     background-color: rgba(255, 255, 255, 0.653);
 }
@@ -601,41 +602,40 @@ ul,ol{
 @media screen and (min-width:1025px){
     .contenedor{
         flex-basis: calc((100%)/1);
-        height:  540px;
+        height:  450px;
         margin-left: 10px;
         margin-right: 10px;
-        top: -130px;
-        left: -30px;
+        top: -9px;
+        left: -10px;
     }
     
     
     .slider-contenedor li ul{
         flex-basis: calc((100%)/1);
-        height: 100%;
+        height: 450px;
     }
     
     .slider-contenedor li img{
         flex-basis: calc((100%)/1);
-        height: 670px;	
+        height: 450px;	
         left: 0;
         top: 0;
     }
     
     .pagination{
-        
-        top: 112%;
+        top: 88%;
         width: 100%;
     }
     
     .pagination li{
-        font-size: 20px;
+        font-size: 35px;
         margin: 2px 5px;
     }
     
     .left, .right{
         top: 0;
         height: 100%;
-        font-size: 35px;
+        font-size: 40px;
     }
     
     .left{
@@ -653,12 +653,10 @@ ul,ol{
         /* background: red;
         border: 1px solid green;*/
         display: flex;
-        position: relative;
         flex-direction: row;
         align-items: center;
         width: 100%;
         height: 550px;
-        top: 50px;
     }
      
     .informacion h1{

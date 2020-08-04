@@ -20,7 +20,7 @@ body, .menu, .contenido, .footer {
   width: 100%;
   top: 0px;
   left: 0px;
-  background-color: #333;
+  background-color: #000000;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .8);
   z-index: 9999;
 }
@@ -159,11 +159,7 @@ body, .menu, .contenido, .footer {
   margin: 0px;
   text-align: center;
   padding: 0.5em;
-<<<<<<< HEAD
-  background-color: #1310bd;
-=======
   background-color: #333;
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
   color: white;
   width: 100%;
 }
@@ -242,21 +238,12 @@ label {
   background-color: #22c22a;
   color: white;
 }
-<<<<<<< HEAD
-.btn-primary:hover {
-  background-color: #066e0b;
-}
-=======
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 @media screen and (max-width: 768px) {
   .sd-hide {
     display: none;
   }
 }
-<<<<<<< HEAD
-=======
 /*Prueba de Live de VSCode Esto es genial para codigo colaborativo*/
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -287,14 +274,11 @@ select {
   top: 15px;
   pointer-events: none;
 }
-<<<<<<< HEAD
-=======
 .error {
   display: block;
   color: #a30202;
   font-weight: bold;
 }
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 .dp-modal {
   position: fixed;
   top: 0;

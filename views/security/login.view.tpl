@@ -1,4 +1,3 @@
-<div class="content">
 <section class="row">
   <form id="formLogin" action="index.php?page=login" method="POST" class="col-md-6 col-offset-3 card">
     <h1>Inicio de Sesión</h1>
@@ -28,7 +27,6 @@
     {{endif showerrors}}
   </form>
 </section>
-</div>
 <script>
   $().ready(
     function(){
@@ -40,4 +38,3 @@
     }
     );
 </script>
-
