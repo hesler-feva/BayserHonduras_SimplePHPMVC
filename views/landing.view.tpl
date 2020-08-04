@@ -19,7 +19,7 @@
             <div class="col-4">
                 <section id='banner'>
                     <div class="boton_p">
-                        <a class="boton" href="../Formulario 1/formulario1.html">
+                        <a class="boton" href="index.php?page=formCotizar">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-4">
                 <div class="imagenlogo">
-                    <img class="pick" src="img/LogoMediano.png" alt="">
+                    <img class="pick" src="public/imgs/LogoMediano.png" alt="">
                 </div>
             </div>
         </section>
