@@ -8,7 +8,7 @@ require_once 'models/security/security.model.php';
       "tocken" => "",
       "txtEmail"=>"",
       "showerrors"=>false,
-      "returnto"=>"?page=dashboard"
+      "returnto"=>"?page=landing" #la pagina para acceder
     );
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $loginData["tocken"] = md5("loginentry".time());
