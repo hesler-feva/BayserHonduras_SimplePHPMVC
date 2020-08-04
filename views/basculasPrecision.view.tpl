@@ -18,7 +18,7 @@
                 <a href="index.php?page=basculasIndustriales"><button class="btn3"></button></a>            
             </section>
         </li>
-     s       </ul>
+         </ul>
     <ol class="pagination">
     </ol>
     <div class="left">
