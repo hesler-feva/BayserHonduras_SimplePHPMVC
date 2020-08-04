@@ -19,7 +19,7 @@
             </section>
                  
         </li>
-        <a href="index.php?page=basculasComerciales"> Hola</a>
+        
             </ul>
     <ol class="pagination">
     </ol>
