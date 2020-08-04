@@ -5,9 +5,16 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-.contenido{
+.contenidoreg{
     width: 100%;
     padding: 15px;
+}
+.contenedorreg {
+    width: 100%;
+    position: relative;
+    height: 279px;
+    top: -50px;
+    left: 2px;
 }
 .formulario{
     background: rgba(20, 19, 19, 0.68);

@@ -19,7 +19,7 @@
         <div class="col-4">
             <section id='banner'>
                 <div class="boton_p">
-                    <a class="boton" href="index.php?page=formRecomendar">
+                    <a class="boton" href="index.php?page=formCotizar">
                         <span></span>
                         <span></span>
                         <span></span>

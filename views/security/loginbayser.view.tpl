@@ -1,4 +1,4 @@
-<section class="contenido">
+<section class="contenidologin">
         <div class="informacion">
 
         <form action="index.php?page=loginbayser" class="formulario" method="POST" id="formLogin" novalidate>
@@ -7,7 +7,7 @@
                 <h2>Iniciar Sesión</h2>
                      <input name="returnto" value="{{returnto}}" type="hidden" />
                      <input name="tocken" value="{{tocken}}" type="hidden"/>
-                 <div class="contenedor">
+                 <div class="contenedorlogin">
                  
                      
                      <div class="input-contenedor">

@@ -1,9 +1,9 @@
- <section class="contenido">
+ <section class="contenidoreg">
         <div class="informacion">
 
         <form action="formulario1.html" class="formulario" method="POST" id="fcot" novalidate>
                 <h1>Regístrese Aquí</h1>
-                 <div class="contenedor">
+                 <div class="contenedorreg">
                  
                  <div class="input-contenedor">
                      <i class="fas fa-user icon"></i>
