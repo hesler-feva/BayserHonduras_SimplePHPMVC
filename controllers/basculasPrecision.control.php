@@ -14,7 +14,7 @@
  */
  // Sección de requires
 
-require_once "models/mantenimiento/productos.models.php";
+require_once "models/mantenimientos/productos.model.php";
 
 /**
  * Corre el Controlador
@@ -26,6 +26,8 @@ function run()
     $arrDataView = array();
     $arrDataView["productos"] = productoCatalogoBasculasPrecision();
     addJsRef("public/css/productos.css");
+    addJsRef("public/css/productos.css");
+
     // addJsRef("public/js/productos.js");
     //addJsRef("public/js/mainProductos.js");
     //addJsRef("public/js/jqueryProductos.js");

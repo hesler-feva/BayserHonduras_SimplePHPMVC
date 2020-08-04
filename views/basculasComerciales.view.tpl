@@ -3,19 +3,19 @@
         <li>
             <img src="public/imgs/landing-comerciales.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="basculas_comerciales.html"> <button class="btn2"></button> </a>
+                <a href="index.php?page=basculasComerciales"><button class="btn2"></button></a>
             </section>
         </li>
         <li>
             <img src="public/imgs/landing-industrial.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="basculas_industriales.html"> <button class="btn3"></button> </a>
+             <a href="index.php?page=basculasIndustriales"><button class="btn3"></button></a>
             </section>
         </li>
         <li>
             <img src="public/imgs/landing-precision.jpg" alt="">
             <section class="Slider-informacion">
-                <a  href="basculas_precision.html"> <button class="btn1"></button> </a>
+               <a href="index.php?page=basculasPrecision"><button class="btn1"></button></a>           
             </section>
         </li>
     </ul>
@@ -32,7 +32,7 @@
 </div>
 
 <section class="cards row">
-<h1 class="titulo-bascula bg-blue">Basculas de Precisión</h1>
+<h1 class="titulo-bascula bg-blue">Basculas de Comerciales</h1>
   {{foreach productos}}
   <section class="col-12 col-sm-6 col-md-3 m-padding">
     <div class="card col-12 depth-2 m-padding">
@@ -43,7 +43,7 @@
       </span>
       <span class="col-12 center depth-1 m-padding card-desc">
           <span class="card-side">{{skuprd}}</span>
-          <span class="col-12">{{nombre}}</span>
+          <span class="col-12">{{dscprd}}</span>
       </span>
       <span class="col-12 center depth-1 m-padding">
         <span class="col-6 m-padding">Disponibles</span>

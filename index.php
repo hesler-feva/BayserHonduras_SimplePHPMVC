@@ -48,6 +48,18 @@ case "logout":
 case "acerca":
     include_once "controllers/acerca.control.php";
     die();
+case "addtocart":
+    include_once "controllers/retail/addtocart.control.php";
+    die();
+case "rmvtocart":
+    include_once "controllers/retail/rmvtocart.control.php";
+    die();
+case "cartanon":
+    include_once "controllers/retail/cartanon.control.php";
+    die();
+case "rmvallcart":
+    include_once "controllers/retail/rmvAllCart.control.php";
+    die();
 case "basculasComerciales":
     include_once "controllers/basculasComerciales.control.php";
     die();
@@ -154,6 +166,11 @@ case "almacen":
     ($logged)?
       include_once "controllers/almacen.control.php":
       mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "cartauth":
+    ($logged) ?
+        include_once "controllers/retail/cartauth.control.php" :
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 }
 
