@@ -14,38 +14,41 @@
   function run(){
     addCssRef("public/css/registrarsebayser.css");
     $viewData =array();
-    if(!empty($_POST['txtCorreo']) && !empty($_POST['txtPswd']) && !empty($_POST['txtName'])){
+   
 
-      
-      $viewData["useremail"] = $_POST["txtCorreo"];
-      $viewData["username"] = $_POST["txtName"];
-      $viewData["usertipo"] =  "ADM";
-      $viewData["userest"] =  "ACT";
-      $viewData["userpswd"] =  $_POST["txtPswd"];
+    
+      if(!empty($_POST['txtCorreo']) && !empty($_POST['txtPswd']) && !empty($_POST['txtName'] !empty($_POST['txtConfirmar']) )){
 
-
-      //PROCESO DE SALADO
-
-      $fchingreso = time();
-      $pswdSalted = "";
-
-      if($fchingreso % 2 == 0){
-        $pswdSalted = $viewData["userpswd"] . $fchingreso;
-      }else{
-        $pswdSalted = $fchingreso . $viewData["userpswd"];
-      }
-
-      $pswdSalted = md5($pswdSalted);
-      $lastId = insertUsuario(	$viewData["username"],$viewData["useremail"],$fchingreso,$pswdSalted,
-                  $viewData["usertipo"], $viewData["userest"] );
-
-      if( $lastId > 0 ){
-        redirectWithMessage("Usuario Creado Satisfactoriamente.", "index.php?page=registrarsebayser");
-      }else{
-        redirectWithMessage("Error en crear usuario.", "index.php?page=registrarsebayser");
-      }
+  
         
-    }
+        $viewData["useremail"] = $_POST["txtCorreo"];
+        $viewData["username"] = $_POST["txtName"];
+        $viewData["usertipo"] =  "ADM";
+        $viewData["userest"] =  "ACT";
+        $viewData["userpswd"] =  $_POST["txtPswd"];
+
+
+        //PROCESO DE SALADO
+
+        $fchingreso = time();
+        $pswdSalted = "";
+
+        if($fchingreso % 2 == 0){
+          $pswdSalted = $viewData["userpswd"] . $fchingreso;
+        }else{
+          $pswdSalted = $fchingreso . $viewData["userpswd"];
+        }
+
+        $pswdSalted = md5($pswdSalted);
+        $lastId = insertUsuario(	$viewData["username"],$viewData["useremail"],$fchingreso,$pswdSalted,
+                    $viewData["usertipo"], $viewData["userest"] );
+
+        if( $lastId > 0 ){
+          redirectWithMessage("Usuario Creado Satisfactoriamente.", "index.php?page=registrarsebayser");
+        }else{
+          redirectWithMessage("Error en crear usuario.", "index.php?page=registrarsebayser");
+        }
+      }
 
     renderizar("security/registrarsebayser", $viewData);
   }
