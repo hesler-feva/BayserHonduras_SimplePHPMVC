@@ -3,12 +3,13 @@
 require_once 'models/security/security.model.php';
 
   function run(){
+    addCssRef("public/css/loginbayser.css");
     $loginData = array(
       "errors" => array(),
       "tocken" => "",
       "txtEmail"=>"",
       "showerrors"=>false,
-      "returnto"=>"?page=landing" #la pagina para acceder
+      "returnto"=>"?page=index" #la pagina para acceder
     );
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $loginData["tocken"] = md5("loginentry".time());
@@ -16,7 +17,7 @@ require_once 'models/security/security.model.php';
         if (isset($_GET["returnUrl"])) {
             $loginData["returnto"] = $_GET["returnUrl"];
         }
-        addCssRef("public/css/loginbayser.css");
+        
         renderizar("security/loginbayser", $loginData);
     }
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -40,7 +41,7 @@ require_once 'models/security/security.model.php';
                     $loginData["tocken"] = md5("loginentry".time());
                     $_SESSION["login_tocken"] = $loginData["tocken"];
                     $loginData["showerrors"] = true;
-                    addCssRef("public/css/loginbayser.css");
+                   
                     renderizar("security/loginbayser", $loginData);
                 } else {
                     //Correr Login del modelo de datos
@@ -52,10 +53,10 @@ require_once 'models/security/security.model.php';
                             $loginData["errors"][] = $terr;
                         }
                         $loginData["showerrors"] = true;
-                        addCssRef("public/css/loginbayser.css");
+                        
                         renderizar("security/loginbayser", $loginData);
                     } else {
-                        addCssRef("public/css/loginbayser.css");
+                        
                         header("Location:index.php" . $loginData["returnto"]);
                     }
                 }
@@ -64,7 +65,7 @@ require_once 'models/security/security.model.php';
                 $_SESSION["login_tocken"] = $loginData["tocken"];
                 $loginData["errors"][] = "Falla al intentar validar credenciales.";
                 $loginData["showerrors"] = true;
-                addCssRef("public/css/loginbayser.css");
+               
                 renderizar("security/loginbayser", $loginData);
             }
         } else {
@@ -72,7 +73,7 @@ require_once 'models/security/security.model.php';
             $_SESSION["login_tocken"] = $loginData["tocken"];
             $loginData["errors"][] = "Falla al intentar validar credenciales.";
             $loginData["showerrors"] = true;
-            addCssRef("public/css/loginbayser.css");
+            
             renderizar("security/loginbayser", $loginData);
         }
     }
