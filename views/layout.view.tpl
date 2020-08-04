@@ -27,7 +27,10 @@
                 <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
                 </div class="">
                     <ul>
-                        <li><a href="index.php?page=landing">Inicio</a></li>
+                        {{if cartEntries}}
+                        <li><a href="index.php?page=cartanon"><span class="ion-ios-cart"></span> <span id="cartcounter">{{cartEntries}}</span> </a></li>
+                        {{endif cartEntries}}
+                        <li><a href="index.php?page=index">Inicio</a></li>
                         <li><a href="">Productos</a>
                         <ul>
                             <li><a href="index.php?page=basculasPrecision">Basculas de Precision</a></li>

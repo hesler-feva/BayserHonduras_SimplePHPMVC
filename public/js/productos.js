@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	// Agregando paginacion --
 	for(i = 1; i <= imgItems; i++){
-		$('.pagination').append('<li><span class="icon-radio-checked2"></span></li>');
+		$('.pagination').append('<li><span class="ion-android-radio-button-on"></span></li>');
 	} 
 	//------------------------
 
