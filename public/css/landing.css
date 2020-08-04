@@ -1,13 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+
 body{
     background-image: url(../imgs/fondo_1025.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-*{
-    box-sizing: border-box;
 }
 
 
@@ -198,11 +199,15 @@ rect{
 
 .imagenlogo{
     width: 100%;
+    position: relative;
+    left: 150px;
+    bottom: 180px;
 }
 
 .pick{
     width: 100%;
     height: auto;
+    
 }
 
 
@@ -474,6 +479,7 @@ svg,rect{
     
     .logo{
         left: 10px;
+       
     }
        
 /*responsive del body*/
@@ -485,6 +491,8 @@ svg,rect{
 .boton{
     /*display: inline-block;*/
     font-size: 24px;
+    left: 125px;
+    top: 130px;
 }
 
 /* Frase */
@@ -512,6 +520,7 @@ svg,rect{
     height: 440px;
     margin: 20px;
     top: -50px;
+    left: 100px;
 }
 
 .caja_columna .texto{
@@ -541,6 +550,8 @@ svg,rect{
 
 .imagenlogo{
     width: 100%;
+    
+    
 }
 
 .pick{

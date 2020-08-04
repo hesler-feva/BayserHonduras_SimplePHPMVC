@@ -24,6 +24,14 @@
                     {{foreach appmenu}}
                       <li><a href="index.php?page={{mdlprg}}">{{mdldsc}}</a></li>
                     {{endfor appmenu}}
+                    <h1>hola</h1>
+                   <li><a href="">Productos</a>
+                        <ul>
+                            <li><a href="index.php?page=basculasPrecision">Basculas de Precision</a></li>
+                            <li><a href="index.php?page=basculasIndustriales">Basculas de Industriales</a></li>
+                            <li><a href="index.php?page=basculasComerciales">Basculas de Comerciales</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.php?page=logout">Cerrar Sesión</a></li>
                 </ul>
                 <div class="hbtn"> <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div></div>
