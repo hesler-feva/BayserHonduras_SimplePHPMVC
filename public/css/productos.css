@@ -74,7 +74,7 @@ ul,ol{
 }
 
 .pagination li{
-	font-size: 20px;
+	font-size: 0px;
 	margin: 2px 5px;
     color: gray;
     cursor: pointer;
@@ -87,7 +87,7 @@ ul,ol{
 	display: flex;
 	align-items: center;
 	color: #2196f3;
-	font-size: 35px;
+	font-size: 30px;
 	cursor: pointer;
 	z-index: 2;
 }
@@ -937,7 +937,7 @@ h1{
     top: -10px;
     height: 100%;
     display: flex; 
-    font-size: 35px;
+    font-size: 30px;
 }
     
 .btn1, .btn2, .btn3{
