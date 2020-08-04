@@ -187,7 +187,7 @@ ul,ol{
 }
 
 .slider-contenedor section h1{
-	font-size: 20px;
+	font-size: 200px;
 	text-align: justify;
 }
 
@@ -710,8 +710,8 @@ footer  hr{
     .btn1, .btn2, .btn3{    
         padding: 1rem 3rem;
         width: 10%;
-        top: 195px;
-        left: -115px;
+        top: -220px;
+        left: 0px;
     }
     
     .btn1::before {
@@ -1034,8 +1034,8 @@ footer  hr{
     .btn1, .btn2, .btn3{    
         padding: 1.6rem 4.3rem;
         width: 10%;
-        top: 290px;
-        left: -235px; 
+        top: -120px;
+        left: 0px; 
     }
       
     .btn1::before {
