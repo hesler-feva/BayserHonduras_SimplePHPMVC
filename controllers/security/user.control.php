@@ -227,7 +227,7 @@
 
     }
 
-    renderizar("security/user", $viewData);
+    renderizar("security/registrarsebayser", $viewData);
   }
 
   run();
