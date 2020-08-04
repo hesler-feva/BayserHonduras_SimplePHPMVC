@@ -27,7 +27,7 @@ if (isset($_GET["page"])) {
 //Siempre
 require_once "controllers/mw/verificar.mw.php";
 require_once "controllers/mw/site.mw.php";
-
+require_once "controllers/retail/mw/cart.mw.php";
 // aqui no se toca jajaja la funcion de este index es
 // llamar al controlador adecuado para manejar el
 // index.php?page=modulo

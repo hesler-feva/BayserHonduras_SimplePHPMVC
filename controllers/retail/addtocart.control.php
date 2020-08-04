@@ -23,7 +23,9 @@ require_once "models/mantenimientos/productos.model.php";
 function run()
 {
     $resultArray = array();
+
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_GET["codprd"])) {
+        
         $codprd = intval($_GET["codprd"]);
         $cantidad = 1;
         $producto = obtenerUnProducto($codprd);
