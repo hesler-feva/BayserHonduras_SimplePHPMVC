@@ -39,7 +39,7 @@ function historiaTransacciones()
     foreach($tempArray as $venta)
     {
         $transacciones["total_global"] += $venta["fctTotal"];
-        $transacciones["transacciones"][] = $venta; //Todo se guarda aqui
+        $transacciones["transacciones"][] = $venta;
     }
 
     return $transacciones;

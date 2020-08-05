@@ -3,7 +3,7 @@
 </header>
 <section class="row">
   {{foreach mantenimientos}}
-    <section class="card depth-0 col-3 center">
+    <section class="card depth-2 col-sm-3 center ">
       <a class="bg-white button" href="index.php?page={{page}}">
         <div class="ion-{{ionicon}} bigicon"></div>
         <div>{{pageDsc}}</div>
@@ -23,5 +23,14 @@
   }
   a.bg-white:hover{
     background-color: #b9b9b9 !important;
+  }
+
+body{
+    background-image: url(public/imgs/ex-header-background.jpg);
+}
+
+  .objetos{
+      display: flex;
+      justify-content: space-evenly;
   }
 </style>

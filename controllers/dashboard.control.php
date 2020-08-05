@@ -1,10 +1,10 @@
 <?php
 /**
  * PHP Version 7
- * Controlador de Controlador
+ * Controlador de Mantenimientos_Menu
  *
- * @category Controllers_Dashboard
- * @package  Controllers\Dashboard
+ * @category Controllers_Mantenimientos_Menu
+ * @package  Controllers\Mantenimientos_Menu
  * @author   Orlando J Betancourth <orlando.betancourth@gmail.com>
  * @license  Comercial http://
  *
@@ -14,8 +14,6 @@
  */
  // Sección de requires
 
-require_once "models/mantenimientos/productos.model.php";
-
 /**
  * Corre el Controlador
  *
@@ -24,10 +22,33 @@ require_once "models/mantenimientos/productos.model.php";
 function run()
 {
     $arrDataView = array();
-    $arrDataView["productos"] = productoCatalogoBasculasPrecision();
-    $arrDataView["productos"] = productoCatalogoBasculasIndustriales();
-    $arrDataView["productos"] = productoCatalogoBasculasComerciales();
+    $arrFunciones = array();
+    //Para Obtener el usuario logueado
+    $usuario = $_SESSION["userCode"];
+    if (isAuthorized('usuarios', $usuario)) {
+        $arrFunciones[] = array(
+            "page" => "users",
+            "pageDsc"=>"users",
+            "ionicon"=> "person"
+        );
+    }
+    if (isAuthorized('roles', $usuario)) {
+        $arrFunciones[] = array(
+            "page" => "roles",
+            "pageDsc"=>"roles",
+            "ionicon"=> "clipboard"
+        );
+    }
+    if (isAuthorized('funciones', $usuario)) {
+        $arrFunciones[] = array(
+          "page" => "programas",
+          "pageDsc" => "programas",
+          "ionicon" => "gear-b"
+        );
+    }
+    $arrDataView["Funciones"] = $arrFunciones;
     renderizar("dashboard", $arrDataView);
 }
+// Correr el controlador
 run();
 ?>

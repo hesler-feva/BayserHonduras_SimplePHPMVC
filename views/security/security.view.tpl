@@ -26,4 +26,8 @@
   a.bg-white:hover {
     background-color: #b9b9b9 !important;
   }
+
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
 </style>
