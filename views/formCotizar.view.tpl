@@ -1,7 +1,7 @@
- <section class="contenido">
+    <section class="contenidocot">
         <div class="informacion">
 
-        <form action="formulario1.html" class="form" method="POST" id="fcot" novalidate>
+        <form action="index.php?page=formCotizar" class="form" method="POST" id="fcot" novalidate>
            <div class="form-header">
                <h1 class="form-title">C<span>otizació</span>n</h1>
            </div> 
