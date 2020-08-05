@@ -1,5 +1,7 @@
+/**
+ * 
+ */
 <?php
-
 require_once 'models/categorias.model.php';
 function run(){
     $arrDataView = array();
