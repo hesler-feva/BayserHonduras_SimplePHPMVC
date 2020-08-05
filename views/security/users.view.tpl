@@ -1,13 +1,13 @@
   <h1>
   Gestión de Usuarios
 </h1>
-<div class="row depth-1 m-padding">
+<div class="row depth-1 m-padding bg-white">
   <form action="index.php?page=users" method="post" class="col-md-8 col-offset-2">
       <div class="row s-padding">
         <label class="col-md-1" for="fltEmail">Correo:&nbsp;</label>
         <input type="email" name="fltEmail"  class="col-md-8"
               id="fltEmail" placeholder="correo@electron.ico" value="{{fltEmail}}" />
-        <button class="col-md-3" id="btnFiltro"><span class="ion-refresh">&nbsp;Actualizar</span></button>
+        <button class="col-md-3 depth-1" id="btnFiltro"><span class="ion-refresh">&nbsp;Actualizar</span></button>
       </div>
   </form>
 </div>
@@ -41,7 +41,11 @@
     </tbody>
   </table>
 </div>
-
+<style>
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
+</style>
 
 <script>
     $().ready(

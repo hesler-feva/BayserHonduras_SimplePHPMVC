@@ -4,13 +4,13 @@
     </header>
 
     <main class="row">
-        <div class="col-12 col-md-10 col-offset-1">
-            <table class="full-width">
+        <div class="col-12 col-md-10 col-offset-1 depth-3">
+            <table class="full-width bg-white">
                 <thead>
-                    <tr class="doradito"> 
+                    <tr class="bg-blue"> 
                         <th>Factura</th>
                         <th>Fecha</th>
-                        <th>Usuario</th>
+                        <th>Usuario-email</th>
                         <th>Producto</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
 
-                <tbody class="zebra">
+                <tbody class="hover">
                     {{foreach transacciones}}
                     <tr>
                         <td>{{fctcod}}</td>
@@ -34,12 +34,8 @@
                 
                 <tfooter> 
                     <tr style="border-top:1px solid #333;">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="right"><strong>Total Global</strong></td>
+                        <td colspan="5" class="bg-blue-grey"></td>
+                        <td class="right"><span class="ion-card"><strong> Total Global</strong></span></td>
                         <td>{{total_global}}</td>
                     </tr>
                 </tfooter>
@@ -47,16 +43,11 @@
         </div>
     </main>
 </section>
-
 <style>
-    .doradito {
-        background-color: #c18907;
+    h1{
+        font-family: font-family: 'Baloo Thambi 2', cursive;
     }
-
-    .ion-plus-circled {
-        width: 50px;
-        height: 50px;
-        color: #fff;
+    body{
+        background-image: url(public/imgs/ex-header-background.jpg);
     }
-
 </style>

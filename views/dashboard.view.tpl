@@ -1,14 +1,35 @@
-<section>
-  <h1>Simple PHP MVC</h1>
+<header>
+  <section>
   <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
 </section>
-<section>
-  <h2>Seguridad</h2>
-  <div>
-    <ul>
-      <li class="loose bg-red"><a href="index.php?page=users">Usuarios</a></li>
-      <li class="loose bg-red"><a href="index.php?page=roles">Roles</a></li>
-      <li class="loose bg-red"><a href="index.php?page=programas">Funciones</a></li>
-    </ul>
-  </div>
+</header>
+<section class="row">
+  {{foreach Funciones}}
+  <section class="card depth-0 col-3 center">
+    <a class="bg-white button" href="index.php?page={{page}}">
+      <div class="ion-{{ionicon}} bigicon"></div>
+      <div>{{pageDsc}}</div>
+    </a>
+  </section>
+  {{endfor Funciones}}
 </section>
+<style>
+  .button {
+    display: block;
+    overflow: auto;
+    padding: 1em;
+    text-decoration: none;
+  }
+
+  .bigicon {
+    font-size: 3em;
+  }
+
+  a.bg-white:hover {
+    background-color: #b9b9b9 !important;
+  }
+
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
+</style>
