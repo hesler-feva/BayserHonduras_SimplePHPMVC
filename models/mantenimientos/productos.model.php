@@ -111,6 +111,11 @@ function productoCatalogoBasculasComerciales()
     return $assocProducto;
 }
 
+/**
+ * Obtiene los Productos para el catálogo
+ *
+ * @return array Arreglo de Productos
+ */
 function productoCatalogoBasculasIndustriales()
 {
     $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
@@ -166,6 +171,11 @@ function productoCatalogoBasculasIndustriales()
     return $assocProducto;
 }
 
+/**
+ * Obtiene los Productos para el catálogo
+ *
+ * @return array Arreglo de Productos
+ */
 function productoCatalogoBasculasPrecision()
 {
     $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre

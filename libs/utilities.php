@@ -12,10 +12,6 @@
  *
  * @link http://url.com
  */
-
-
-
- 
 require_once "libs/template_engine.php";
 
 define('ENCRYPT_SECRET', 'SOMEEas@$ad_11.˜');

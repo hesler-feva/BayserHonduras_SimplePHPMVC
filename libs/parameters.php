@@ -13,9 +13,9 @@
  * @link http://url.com
  */
 $server = "127.0.0.1";
-$user = "bayser";
-$pswd = "carm3l1t4s";
-$database = "bayserhonduras";
+$user = "dynauser";
+$pswd = "fr4nc1scanus";
+$database = "dynapolls";
 $port = "3306";
 
 
