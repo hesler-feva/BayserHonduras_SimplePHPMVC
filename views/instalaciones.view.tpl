@@ -33,7 +33,6 @@
     </div>
 </section>
 <section>
-    <h1 class="bg-blue">Instalaciones</h1>
     <div class="informacion">
         <div class="imagenventa col-m-2">
             <img class="pick" src="public/imgs/insta0.jpeg" alt="">

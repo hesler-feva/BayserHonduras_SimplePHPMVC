@@ -2,7 +2,7 @@
 
             <div class="informacion">
 
-                <form class="form" action="formulario2.html" method="POST" id="fcot" novalidate>
+                <form class="form" action="index.php?page=formRecomendar" method="POST" id="fcot" novalidate>
                     <div class="form-header">
                         <h1 class="form-title">E<span>ncuest</span>a</h1>
                     </div>
