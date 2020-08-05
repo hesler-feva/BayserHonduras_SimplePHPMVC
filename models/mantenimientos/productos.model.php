@@ -58,7 +58,7 @@ function todosLosProductos()
  */
 function productoCatalogoBasculasComerciales()
 {
-    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd
         from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBC%');";
     $tmpProducto =  obtenerRegistros($sqlSelect);
     $assocProducto = array();
@@ -118,7 +118,7 @@ function productoCatalogoBasculasComerciales()
  */
 function productoCatalogoBasculasIndustriales()
 {
-    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd
     from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBI%');";
     $tmpProducto =  obtenerRegistros($sqlSelect);
     $assocProducto = array();
@@ -178,7 +178,7 @@ function productoCatalogoBasculasIndustriales()
  */
 function productoCatalogoBasculasPrecision()
 {
-    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd, nombre
+    $sqlSelect = "SELECT codprd, dscprd, stkprd, skuprd, urlthbprd, prcprd
     from productos where (estprd in('ACT','DSC') AND skuprd like  '%PBP%');";
     $tmpProducto =  obtenerRegistros($sqlSelect);
     $assocProducto = array();

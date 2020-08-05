@@ -24,7 +24,9 @@ require_once "models/mantenimientos/productos.model.php";
 function run()
 {
     $arrDataView = array();
-    $arrDataView["productos"] = productoCatalogo();
+    $arrDataView["productos"] = productoCatalogoBasculasPrecision();
+    $arrDataView["productos"] = productoCatalogoBasculasIndustriales();
+    $arrDataView["productos"] = productoCatalogoBasculasComerciales();
     renderizar("dashboard", $arrDataView);
 }
 run();

@@ -88,7 +88,7 @@ case "formRecomendar":
     include_once "controllers/formRecomendar.control.php";
     die();  
 case "loginbayser":
-    include_once "controllers/security/loginbayser.control.php";
+    include_once "controllers/security/login.control.php";
     die();
 case "registrarsebayser":
     include_once "controllers/security/registrarsebayser.control.php";
