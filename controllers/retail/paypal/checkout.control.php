@@ -78,8 +78,8 @@ function createPaypalTransacction( $_amount , $_items )
     $redirectUrls = new \PayPal\Api\RedirectUrls();
     //TODO: Change This with host on production
     $redirectUrls
-        ->setReturnUrl("http://localhost/mvc/index.php?page=checkoutapr")
-        ->setCancelUrl("http://localhost/mvc/index.php?page=checkoutcnl");
+        ->setReturnUrl("http://localhost/bayser_honduras_simplePHPMVC/index.php?page=checkoutapr")
+        ->setCancelUrl("http://localhost/bayser_honduras_simplePHPMVC/index.php?page=checkoutcnl");
 
     $payment = new \PayPal\Api\Payment();
     $payment->setIntent('sale')
