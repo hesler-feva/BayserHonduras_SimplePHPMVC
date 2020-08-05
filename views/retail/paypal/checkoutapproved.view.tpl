@@ -38,5 +38,5 @@
 </br>
 </br>
 <section class="center col-md-12">
-    <h2>¡Gracias por tu Donación!</h2>
+    <h2>¡Gracias por tu Compra!</h2>
 </section>

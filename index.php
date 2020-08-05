@@ -88,7 +88,7 @@ case "formRecomendar":
     include_once "controllers/formRecomendar.control.php";
     die();  
 case "loginbayser":
-    include_once "controllers/security/login.control.php";
+    include_once "controllers/security/loginbayser.control.php";
     die();
 case "registrarsebayser":
     include_once "controllers/security/registrarsebayser.control.php";
@@ -116,6 +116,11 @@ case "dashboard":
     ($logged)?
       include_once "controllers/dashboard.control.php":
       mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "security":
+    ($logged)?
+        include_once "controllers/security/security.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 case "users":
     ($logged)?
@@ -146,6 +151,11 @@ case "programa":
     ($logged)?
       include_once "controllers/security/programa.control.php":
       mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "parametros":
+    ($logged) ?
+        include_once "controllers/mantenimientos/mantenimientos.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 case "categorias":
     ($logged)?
@@ -190,6 +200,11 @@ case "checkoutcnl":
 case "parametros":
     ($logged) ?
         include_once "controllers/mantenimientos/mantenimientos.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "historial":
+    ($logged)?
+        include_once "controllers/retail/paypal/historial.control.php":
         mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 }

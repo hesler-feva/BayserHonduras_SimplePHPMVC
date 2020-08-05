@@ -20,6 +20,32 @@ require_once "libs/dao.php";
  Constantes como funciones
 -----------------------------------------------------------------*/
 /**
+ * Obtiene historia de transacciones
+ *
+ * @return integer
+ */
+function historiaTransacciones()
+{
+    $sqlSel = "SELECT fd.fctcod, DATE(f.fctfch) as Fecha, u.useremail, fd.fctDsc, fd.fctCtd,
+    fd.fctPrc, f.fctTotal FROM factura_detalle fd
+    inner join factura f on fd.fctcod = f.fctcod
+	inner join usuario u on f.userCode = u.usercod;"; 
+
+    $tempArray =  obtenerRegistros($sqlSel);
+
+    $transacciones = array();
+    $transacciones["total_global"] = 0;
+
+    foreach($tempArray as $venta)
+    {
+        $transacciones["total_global"] += $venta["fctTotal"];
+        $transacciones["transacciones"][] = $venta; //Todo se guarda aqui
+    }
+
+    return $transacciones;
+}
+
+/**
  * Obtiene la Delta para Carretilla Autenticada
  *
  * @return integer
