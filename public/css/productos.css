@@ -3,6 +3,8 @@ ul,ol{
 	list-style: none;	
 }
 
+
+
 .contenedor{
 	position: relative;
 	width: 100%;
@@ -1099,5 +1101,9 @@ header nav ul li{
 .informacion-producto{
     font-size: 13.5px;
     line-height: 1.5;
+}
+
+.titulo-bascula{
+    margin-top: -3em;
 }
 }

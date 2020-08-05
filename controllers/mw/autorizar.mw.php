@@ -6,25 +6,33 @@ function generarMenu($usercod)
 {
     $menu = array();
 
-    if (isAuthorized('dashboard', $usercod)) {
+    if (isAuthorized('dashboard', $usercod)) 
+    {
         $menu[] = array("mdlprg"=>"dashboard","mdldsc"=>"Inicio");
     }
-    //Agregar Nuevos o Partes del Menu (Recuerde no Sobre Cargaer)
-    // Perfil Administrativo
-    if (isAuthorized('security', $usercod)) {
-        $menu[] = array("mdlprg"=>"security","mdldsc"=>"Seguridad");
-    }
-    if (isAuthorized('parametros', $usercod)) {
-        $menu[] = array("mdlprg"=>"parametros","mdldsc"=>"Mantenimientos");
+    
+    if (isAuthorized('security', $usercod)) 
+    {
+        $menu[] = array("mdlprg"=>"security","mdldsc"=>"Administracion");
     }
 
+    if (isAuthorized('parametros', $usercod)) 
+    {
+        $menu[] = array("mdlprg"=>"parametros","mdldsc"=>"Productos");
+    }
+
+    if (isAuthorized('historial', $usercod)) 
+    {
+        $menu[] = array("mdlprg"=>"historial","mdldsc"=>"Historial");
+    }
+    
     addToContext('appmenu', $menu);
 }
 
 function isAuthorized($assetCode, $usercod)
 {
     $programa = obtenerFuncionPorCodigo($assetCode);
-    if (count($programa) == 0) {
+    if (is_array($programa) && count($programa) == 0) {
         insertFuncion($assetCode, $assetCode, 'ACT', 'PRG');
     }
     if ($_SESSION["userType"] == 'ADM') {
@@ -32,6 +40,7 @@ function isAuthorized($assetCode, $usercod)
     }
     return estaAutorizado($usercod, $assetCode);
 }
+
 
 function hasAccess($functionCode, $usercod)
 {
@@ -41,7 +50,11 @@ function hasAccess($functionCode, $usercod)
     }
     if ($_SESSION["userType"] == 'ADM') {
         return true;
+
     }
     return estaAutorizado($usercod, $assetCode);
 }
+
+
+
 ?>

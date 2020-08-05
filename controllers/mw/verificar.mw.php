@@ -13,8 +13,7 @@
           return false;
         }
     }
-    function mw_setEstaLogueado($usuario, $nombre, $email,$tipo, $logueado)
-    {
+    function mw_setEstaLogueado($usuario, $nombre, $email,$tipo, $logueado){
         if($logueado){
             $_SESSION["userLogged"] = true;
             $_SESSION["userCode"] = $usuario;
@@ -27,7 +26,6 @@
             $_SESSION["userScreenName"] = "";
             $_SESSION["userEmail"] = "";
             $_SESSION["userType"] = "";
-            $_SESSION["cart_anon_uid"] = "";
         }
     }
     function mw_redirectToLogin($to){

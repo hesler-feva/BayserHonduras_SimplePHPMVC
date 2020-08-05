@@ -28,9 +28,8 @@
         <span class="ion-android-arrow-dropright-circle"></span>
     </div>
 </div>
-
-<section class="cards row">
 <h1 class="titulo-bascula bg-blue">Basculas de Precisión</h1>   
+<section class="cards row">
   {{foreach productos}}
   <section class="col-12 col-sm-6 col-md-3 m-padding">
     <div class="card col-12 depth-2 m-padding">
