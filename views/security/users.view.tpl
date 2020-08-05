@@ -25,7 +25,7 @@
           </a></th>
       </tr>
     </thead>
-    <tbody class="zebra">
+    <tbody class="zebra center">
       {{foreach usuarios}}
       <tr>
         <td>{{useremail}}</td>

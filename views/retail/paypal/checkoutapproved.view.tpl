@@ -40,3 +40,8 @@
 <section class="center col-md-12">
     <h2>¡Gracias por tu Compra!</h2>
 </section>
+<style>
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
+</style>

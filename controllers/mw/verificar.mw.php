@@ -30,7 +30,7 @@
     }
     function mw_redirectToLogin($to){
         $loginstring = urlencode("?".$to);
-        $url = "index.php?page=login&returnUrl=".$loginstring;
+        $url = "index.php?page=loginbayser&returnUrl=".$loginstring;
         header("Location:" . $url);
         die();
     }

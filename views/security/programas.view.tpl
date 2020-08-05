@@ -24,7 +24,7 @@
           </a></th>
       </tr>
     </thead>
-    <tbody class="zebra">
+    <tbody class="zebra center">
       {{foreach programas}}
       <tr>
         <td>{{fncod}}</td>

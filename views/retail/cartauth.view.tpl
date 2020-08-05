@@ -59,6 +59,11 @@
 
   </section>
 </section>
+<style>
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
+</style>
 <script>
   $().ready(function () {
     $(".mdftocart, .rmvcart").click(function (e) {

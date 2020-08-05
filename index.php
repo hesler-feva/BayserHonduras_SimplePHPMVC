@@ -158,14 +158,14 @@ case "parametros":
         mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 case "categorias":
-    ($logged)?
-      include_once "controllers/categorias.control.php":
-      mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    ($logged) ?
+        include_once "controllers/mantenimientos/categorias.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 case "categoria":
-    ($logged)?
-      include_once "controllers/categoria.control.php":
-      mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    ($logged) ?
+        include_once "controllers/mantenimientos/categoria.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 case "almacenes":
     ($logged)?
@@ -205,6 +205,21 @@ case "parametros":
 case "historial":
     ($logged)?
         include_once "controllers/retail/paypal/historial.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "historialXUser":
+    ($logged)?
+        include_once "controllers/retail/paypal/historialFiltro.control.php":
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "productos":
+    ($logged) ?
+        include_once "controllers/mantenimientos/productos.control.php" :
+        mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+    die();
+case "producto":
+    ($logged) ?
+        include_once "controllers/mantenimientos/producto.control.php" :
         mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
 }

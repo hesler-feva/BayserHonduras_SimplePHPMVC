@@ -8,7 +8,7 @@
         <th>Código</th>
         <th>Centro de Costos</th>
         <th>Estado</th>
-        <th><button id="btnAddNew">Nuevo</button></th>
+        <th><a class="btn depth-1 s-margin" href="index.php?page=centro_de_costos&mode=INS&cccod="><span class="ion-plus"></span></a></th>
       </tr>
     </thead>
     <tbody>

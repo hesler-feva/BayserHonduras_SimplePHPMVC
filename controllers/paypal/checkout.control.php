@@ -13,7 +13,7 @@
  * @link http://url.com
  */
 
-// Sección de requires
+ 
 require_once 'libs/paypal.php';
 /**
  * Renderizado de Documento

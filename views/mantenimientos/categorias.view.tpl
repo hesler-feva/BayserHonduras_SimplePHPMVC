@@ -10,19 +10,21 @@
             <th>Código</th>
             <th>Categoría</th>
             <th>Estado</th>
-            <th class="center"><button id="btnNew">Add New</button></th>
+            <th>
+                    <a class="btn depth-1 s-margin" href="index.php?page=categoria&mode=INS&catid=" class="btn"><span class="ion-plus"></span></a>
+                </th>
           </tr>
         </thead>
-        <tbody class="zebra">
+        <tbody class="zebra hover center">
           {{foreach categorias}}
             <tr>
               <td>{{ctgcod}}</td>
               <td>{{ctgdsc}}</td>
               <td>{{ctgest}}</td>
               <td class="center">
-                <a class="btn" href="index.php?page=categoria&mode=UPD&ctgcod={{ctgcod}}">Editar</a>
-                <a class="btn" href="index.php?page=categoria&mode=DSP&ctgcod={{ctgcod}}">Ver</a>
-                <a class="btn" href="index.php?page=categoria&mode=DEL&ctgcod={{ctgcod}}">Eliminar</a>
+                <a class="btn depth-1 s-margin" href="index.php?page=categoria&mode=DSP&ctgcod={{ctgcod}}" class="btn"><span class="ion-eye"></span></a>
+                <a class="btn depth-1 s-margin" href="index.php?page=categoria&mode=UPD&ctgcod={{ctgcod}}" class="btn"><span class="ion-edit"></span></a>
+                <a class="btn depth-1 s-margin" href="index.php?page=categoria&mode=DEL&ctgcod={{ctgcod}}" class="btn"><span class="ion-trash-b"></span></a>
               </td>
             </tr>
             {{endfor categorias}}

@@ -66,7 +66,11 @@
   </section>
 
 </section>
-
+<style>
+  body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+  }
+</style>
 <!-- Cada vez que se da click a Remover o Añadir una unidad mas a un producto o a remover todo el carrito -->
 <script>
   $().ready(function () 
@@ -116,6 +120,6 @@
     }
 
     .doradito {
-        background-color: #c18907;
+        background-color: #2196f3;
     }
 </style>

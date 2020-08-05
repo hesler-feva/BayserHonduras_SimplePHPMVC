@@ -24,7 +24,7 @@
           </a></th>
       </tr>
     </thead>
-    <tbody class="zebra">
+    <tbody class="zebra center">
       {{foreach roles}}
       <tr>
         <td>{{rolescod}}</td>

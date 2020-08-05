@@ -5,6 +5,7 @@ body {
   padding: 0px;
   background-color: #FFF;
 }
+
 body, .menu, .contenido, .footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -159,14 +160,11 @@ body, .menu, .contenido, .footer {
   margin: 0px;
   text-align: center;
   padding: 0.5em;
-<<<<<<< HEAD
-  background-color: #1310bd;
-=======
   background-color: #333;
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
   color: white;
   width: 100%;
 }
+
 pre {
   background-color: #333;
   color: #1A9626;
@@ -242,21 +240,15 @@ label {
   background-color: #22c22a;
   color: white;
 }
-<<<<<<< HEAD
 .btn-primary:hover {
   background-color: #066e0b;
 }
-=======
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 @media screen and (max-width: 768px) {
   .sd-hide {
     display: none;
   }
 }
-<<<<<<< HEAD
-=======
 /*Prueba de Live de VSCode Esto es genial para codigo colaborativo*/
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -287,14 +279,11 @@ select {
   top: 15px;
   pointer-events: none;
 }
-<<<<<<< HEAD
-=======
 .error {
   display: block;
   color: #a30202;
   font-weight: bold;
 }
->>>>>>> 8b6408374c948e0fa4ca144f0a470e673eca3cdb
 .dp-modal {
   position: fixed;
   top: 0;
@@ -539,3 +528,4 @@ input[type="number"], input[type="date"] {
   width: 100%;
   max-width: 480px !important;
 }
+

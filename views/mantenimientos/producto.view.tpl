@@ -65,13 +65,13 @@
 
       <fieldset>
         <label class="col-12 col-sm-4 col-md-3">URL imagen: &nbsp;</label>
-        <input type="text" name="urlprd" value="{{urlprd}}" maxlength="255" placeholder="Imágen de Portada" disabled readonly />
+        <input type="text" name="urlprd" value="{{urlprd}}" maxlength="255" placeholder="Imágen de Portada" />
       </fieldset>
 
       <fieldset>
         <label class="col-12 col-sm-4 col-md-3">URL imagen pequeña: &nbsp;</label>
         <input type="text" name="urlthbprd" value="{{urlthbprd}}" maxlength="255" placeholder="Imágen Catálogo"
-           disabled readonly  />
+            />
       </fieldset>
 
       <fieldset>

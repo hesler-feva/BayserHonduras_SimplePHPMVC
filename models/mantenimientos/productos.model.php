@@ -45,6 +45,28 @@ function historiaTransacciones()
     return $transacciones;
 }
 
+
+/** 
+ * Obtiene historia de transacciones por user
+ *
+ * @return integer
+ */
+function historiaTransaccionesXUser($userEmail)
+{
+    $sqlSRTR = "SELECT fd.fctcod, DATE(f.fctfch) as Fecha, u.useremail, fd.fctDsc, fd.fctCtd,
+    fd.fctPrc, f.fctTotal FROM factura_detalle fd
+    inner join factura f on fd.fctcod = f.fctcod
+    inner join usuario u on f.userCode = u.usercod where u.useremail like '%s';";
+    return obtenerUnRegistro(
+        sprintf(
+            $sqlSRTR,
+            $userEmail
+        )
+    );
+    $transacciones = obtenerRegistros($sqlSRTR, $userEmail);
+    return $transacciones;
+}
+
 /**
  * Obtiene la Delta para Carretilla Autenticada
  *

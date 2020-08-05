@@ -35,3 +35,8 @@
         </tbody>
     </table>
 </section>
+<style>
+body{
+        background-image: url(public/imgs/ex-header-background.jpg);
+}
+</style>

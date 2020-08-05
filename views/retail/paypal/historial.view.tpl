@@ -8,8 +8,8 @@
             <table class="full-width bg-white">
                 <thead>
                     <tr class="bg-blue"> 
-                        <th>Factura</th>
-                        <th>Fecha</th>
+                        <th>ID Factura</th>
+                        <th>Fecha Creación</th>
                         <th>Usuario-email</th>
                         <th>Producto</th>
                         <th>Cantidad</th>
