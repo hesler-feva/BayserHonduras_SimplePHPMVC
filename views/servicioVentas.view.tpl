@@ -31,13 +31,12 @@
 
     </section>
     <section>
-        <h1 class="bg-blue">Ventas</h1>
         <div class="informacion">
             <div class="imagenventa col-m-2">
                 <img class="pick" src="public/imgs/negocio.jpg" alt="">
             </div>
             <div class=lineapinta></div>
-            <div class="contenidoventa col-m-4">
+            <div class="contenido col-m-4">
             <div class="parrafo">
                 <p>
                     En Bayser Honduras brindamos productos de calidad y de la mas alta tecnología.
