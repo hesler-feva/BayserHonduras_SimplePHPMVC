@@ -37,7 +37,7 @@
                 <img class="pick" src="public/imgs/negocio.jpg" alt="">
             </div>
             <div class=lineapinta></div>
-            <div class="contenido col-m-4">
+            <div class="contenidoventa col-m-4">
             <div class="parrafo">
                 <p>
                     En Bayser Honduras brindamos productos de calidad y de la mas alta tecnología.

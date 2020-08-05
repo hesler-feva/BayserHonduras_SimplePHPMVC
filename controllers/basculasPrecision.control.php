@@ -25,7 +25,7 @@ function run()
 {
     $arrDataView = array();
     $arrDataView["productos"] = productoCatalogoBasculasPrecision();
-    addJsRef("public/css/productos.css");
+    addJsRef("public/css/plantilla.css");
     // addJsRef("public/js/productos.js");
     //addJsRef("public/js/mainProductos.js");
     //addJsRef("public/js/jqueryProductos.js");
