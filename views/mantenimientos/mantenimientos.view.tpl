@@ -1,5 +1,8 @@
 <header>
-  <h1>Manteniminetos</h1>
+    <section>
+    <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
+    </section>
+    <h1>Manteniminetos</h1>
 </header>
 <section class="row">
   {{foreach mantenimientos}}

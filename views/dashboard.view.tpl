@@ -5,7 +5,7 @@
 </header>
 <section class="row">
   {{foreach Funciones}}
-  <section class="card depth-0 col-3 center">
+  <section class="card depth-2 col-3 center">
     <a class="bg-white button" href="index.php?page={{page}}">
       <div class="ion-{{ionicon}} bigicon"></div>
       <div>{{pageDsc}}</div>

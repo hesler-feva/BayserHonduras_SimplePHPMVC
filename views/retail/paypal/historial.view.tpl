@@ -35,7 +35,7 @@
                 <tfooter> 
                     <tr style="border-top:1px solid #333;">
                         <td colspan="5" class="bg-blue-grey"></td>
-                        <td class="right"><span class="ion-card"><strong> Total Global</strong></span></td>
+                        <td class="right"><span class="ion-card"><strong> Total Transacciones</strong></span></td>
                         <td>{{total_global}}</td>
                     </tr>
                 </tfooter>
@@ -44,9 +44,6 @@
     </main>
 </section>
 <style>
-    h1{
-        font-family: font-family: 'Baloo Thambi 2', cursive;
-    }
     body{
         background-image: url(public/imgs/ex-header-background.jpg);
     }
