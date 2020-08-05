@@ -6,10 +6,10 @@ function generarMenu($usercod)
 {
     $menu = array();
 
-    if (isAuthorized('dashboard', $usercod)) 
+    /*if (isAuthorized('dashboard', $usercod)) 
     {
         $menu[] = array("mdlprg"=>"dashboard","mdldsc"=>"Inicio");
-    }
+    }*/
     
     if (isAuthorized('security', $usercod)) 
     {

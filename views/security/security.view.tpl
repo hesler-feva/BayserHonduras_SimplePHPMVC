@@ -1,9 +1,12 @@
 <header>
+  <section>
+  <img class="imgnav" src="public/imgs/LogoNav2.png" alt=""></a>
+</section>
   <h1>Seguridad</h1>
 </header>
 <section class="row">
   {{foreach security}}
-  <section class="card depth-0 col-3 center">
+  <section class="card depth-2 col-3 center">
     <a class="bg-white button" href="index.php?page={{page}}">
       <div class="ion-{{ionicon}} bigicon"></div>
       <div>{{pageDsc}}</div>
