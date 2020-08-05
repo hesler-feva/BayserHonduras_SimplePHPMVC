@@ -1,5 +1,6 @@
 <section>
         <div class="contenedor">
+        <h1 class= "titulo-servicio"> Mantenimiento</h1>
             <ul class="slider-contenedor">
                 <li>
                     <img src="public/imgs/mantenimiento_1.jpg" alt="">
