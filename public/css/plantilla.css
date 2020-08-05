@@ -877,34 +877,24 @@ footer  hr{
     
     .icono-ubicacion{
         display: inline;
-        height: inherit;
+        font-size: 18px;
     }
     
-    .icon-location{
-        font-size: 30px;
-    }
-    
-    .direccion-ubicacion{
-        display: flex;
-        justify-content: center;
-        text-align: center;
+    .informacion-ubicacion{
+        display: inline;
+        font-size: 9px;
     }
     
     .icono-horario{
         display: inline;
-        height: inherit;
+        font-size: 18px;
     }
     
-    .icon-time{
-        font-size: 30px;
+    .informacion-horario{
+        display: inline;
+        font-size: 9px;
     }
-    
-    .texto-horario{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    
+   
     .socios{
         height: auto;
     }
